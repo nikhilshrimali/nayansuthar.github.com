@@ -1,0 +1,125 @@
+@import "compass";
+
+/*----- Variables -----*/
+$color-aqua      : #8fbfca;
+$color-red       : #e15842;
+$color-red-dark  : #dd4831;
+$color-bg        : #f0f6f7;
+
+$gutter          : 12px;
+
+
+@mixin animation ($name:no-name, $dur:3s, $tf:linear, $itc:infinite, $del:0s ) {
+    animation: $name $dur $tf $itc $del;
+    -webkit-animation: $name $dur $tf $itc $del;
+    -moz-animation: $name $dur $tf $itc $del;
+    -ms-animation: $name $dur $tf $itc $del;
+    -o-animation: $name $dur $tf $itc $del;
+}
+
+@mixin keyframes ($name) {
+    @keyframes $name { @content }
+    @-webkit-keyframes $name { @content }
+    @-moz-keyframes $name { @content }
+    @-ms-keyframes $name { @content }
+    @-o-keyframes $name { @content }
+}
+
+@mixin my-transform ($value) {
+    transform: $value;
+    -webkit-transform: $value;
+    -moz-transform: $value;
+    -ms-transform: $value;
+    -o-transform: $value;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    @include box-sizing(border-box);
+    font-family: calibri, arial;
+    font-size: 16px;
+    letter-spacing: 0.04em;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    padding-top: 60px;
+}
+
+.intro-page, .work-page {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    .page-content {
+        width: 740px;
+        max-width: 100%;
+        height: 400px;
+        max-height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        padding: 0 $gutter;
+        @include my-transform(translateX(-50%) translateY(-50%));
+        text-align: center;
+    }
+}
+
+.intro-page {
+    background: $color-aqua;
+    color: #fff;
+    z-index: 2;
+    .logo-img {
+        width: 90px;
+        height: 40px;
+        margin: 0 auto;
+    }
+    .intro-text {
+        width: 100%;
+        max-height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        padding: 0 $gutter;
+        @include my-transform(translateY(-50%));
+        p {
+            margin-bottom: $gutter*2;
+        }
+        a .twitter-img {
+            width: 24px;
+            height: 20px;
+            margin: 0 auto;
+            @include opacity(0.5);
+            @include transition(all 0.25s linear 0s);
+        }
+        a:hover .twitter-img {
+            @include opacity(1);
+        }
+    }
+    .work-link {
+        width: 160px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -80px;
+        background: $color-red;
+        border: 1px solid $color-red-dark;
+        color: #fff;
+        @include text-shadow(0 -1px 0 $color-red-dark);
+        @include box-shadow(0 0 1px 1px rgba(#fff, 0.1));
+    }
+}
