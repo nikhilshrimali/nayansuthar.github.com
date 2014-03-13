@@ -75,7 +75,8 @@ body {
 }
 
 .intro-page {
-    background: $color-aqua;
+    background-color: $color-aqua;
+    background-image: url("../images/bg-texture.png");
     color: #fff;
     z-index: 2;
     .logo-img {
