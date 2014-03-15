@@ -79,13 +79,30 @@ body { padding-top: $header-height }
     background-color: $color-aqua;
     background-image: url("../images/bg-texture.png");
     color: #fff;
-    z-index: 2;
+    z-index: 3;
 }
 .work-page {
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    top: $header-height;
+    bottom: 0;
+    left: 0;
+    right: -50px;
+    padding-right: 50px;
     overflow-x: hidden;
     overflow-y: auto;
+    z-index: 1;
+}
+.scroll-bar {
+    width: 10px;
+    height: 50px;
+    background-color: $color-aqua;
+    background-image: url("../images/scroll-bar.png");
+    background-size: 100% 100%;
+    position: absolute;
+    right: 0;
+    top: $header-height;
+    @include transition(all 0.2s ease-out 0);
+    z-index: 2;
 }
 
 
@@ -95,7 +112,6 @@ body { padding-top: $header-height }
 /*----- Intro Page -----*/
 .intro-page {
     @include transition(height 0.6s ease-out 0s, background 0.3s ease-out 0s);
-    &.accelerate { @include translate3d(0, 0, 0) }
     .intro-box {
         width: $page-max-width;
         max-width: 100%;
@@ -179,9 +195,15 @@ body { padding-top: $header-height }
         @include box-shadow(0 1px 0 0 rgba(#fff, 0.5));
     }
 
+    &.accelerate {
+        &, .intro-box, .logo-img {
+            @include perspective(1000);
+        }
+    }
+
     &[data-view="collapsed"]{
         height: $header-height;
-        background: none;
+        background-color: $color-bg;
         cursor: pointer;
         @include transition(height 0.6s ease-out 0s, background 0.3s ease-out 0.3s);
         .intro-box {
@@ -199,8 +221,6 @@ body { padding-top: $header-height }
         .intro-link, &:after { display: block }
     }
 }
-
-
 
 
 

@@ -7,8 +7,8 @@ var introFixedBox = document.querySelector (".intro-page .fixed-box");
 var workPage = document.querySelector (".work-page");
 var introLink = document.querySelector (".intro-page .intro-link");
 var workLink = document.querySelector (".intro-page .work-link");
+var scrollBar = document.querySelector (".scroll-bar");
 
-var workScrollTimer = null;
 
 
 //----- Adjust page
@@ -42,29 +42,7 @@ introLink.addEventListener ("click", function () {
 
 //----- Scrolling on Work Page
 workPage.addEventListener ("scroll", function (evt) {
-  if ( workScrollTimer ) {
-    clearTimeout (workScrollTimer);
-  }
-  workScrollTimer = setTimeout (function () {
-    var page = Math.round ( workPage.scrollTop / workPage.offsetHeight );
-    var scrollAnim = function () {
-      if (workPage.scrollTop < page * workPage.offsetHeight) {
-        workPage.scrollTop += ( page*workPage.offsetHeight - workPage.scrollTop ) /2;
-        if ( (page*workPage.offsetHeight - workPage.scrollTop)/2 < 1) {
-          workPage.scrollTop = page*workPage.offsetHeight;
-        }
-      }
-      else if (workPage.scrollTop > page * workPage.offsetHeight) {
-        workPage.scrollTop -= (workPage.scrollTop - page*workPage.offsetHeight) /2;
-        if ( (workPage.scrollTop - page*workPage.offsetHeight)/2 < 1) {
-          workPage.scrollTop = page*workPage.offsetHeight;
-        }
-      }
-      if ( workPage.scrollTop !== page * workPage.offsetHeight ) {
-        console.log ("scrollAnim");
-        setTimeout (function () { scrollAnim () }, 5)
-      }
-    }
-    scrollAnim ();
-  }, 150);
+  var scrollRange = workPage.offsetHeight - scrollBar.offsetHeight;
+  var scrollHt = workPage.scrollHeight - workPage.offsetHeight;
+  scrollBar.style.top = (60 + (workPage.scrollTop/scrollHt)*scrollRange)+"px";
 }, false);
