@@ -54,14 +54,14 @@ body {
 /*----- Intro Page -----*/
 /* line 96, ../scss/screen.scss */
 .intro-page {
-  -webkit-transition: height 0.5s ease-out, background 0.25s ease-out;
+  -webkit-transition: height 0.6s ease-out, background 0.3s ease-out;
   -webkit-transition-delay: 0s, 0s;
-  -moz-transition: height 0.5s ease-out 0s, background 0.25s ease-out 0s;
-  -o-transition: height 0.5s ease-out 0s, background 0.25s ease-out 0s;
-  transition: height 0.5s ease-out 0s, background 0.25s ease-out 0s;
+  -moz-transition: height 0.6s ease-out 0s, background 0.3s ease-out 0s;
+  -o-transition: height 0.6s ease-out 0s, background 0.3s ease-out 0s;
+  transition: height 0.6s ease-out 0s, background 0.3s ease-out 0s;
 }
 /* line 98, ../scss/screen.scss */
-.intro-page.accelarate {
+.intro-page.accelerate {
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
@@ -84,11 +84,11 @@ body {
   -moz-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
   -o-transform: translateX(-50%) translateY(-50%);
-  -webkit-transition: all 0.25s ease-out;
+  -webkit-transition: all 0.3s ease-out;
   -webkit-transition-delay: 0s;
-  -moz-transition: all 0.25s ease-out 0s;
-  -o-transition: all 0.25s ease-out 0s;
-  transition: all 0.25s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
 }
 /* line 112, ../scss/screen.scss */
 .intro-page .logo-img {
@@ -97,11 +97,11 @@ body {
   margin: 0 auto;
   background-image: url("../images/logo.png");
   background-size: 100% 100%;
-  -webkit-transition: all 0.25s ease-out;
+  -webkit-transition: all 0.3s ease-out;
   -webkit-transition-delay: 0s;
-  -moz-transition: all 0.25s ease-out 0s;
-  -o-transition: all 0.25s ease-out 0s;
-  transition: all 0.25s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
 }
 /* line 120, ../scss/screen.scss */
 .intro-page .intro-text {
@@ -128,11 +128,11 @@ body {
   margin: 0 auto;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
-  -webkit-transition: all 0.25s linear;
+  -webkit-transition: all 0.3s linear;
   -webkit-transition-delay: 0s;
-  -moz-transition: all 0.25s linear 0s;
-  -o-transition: all 0.25s linear 0s;
-  transition: all 0.25s linear 0s;
+  -moz-transition: all 0.3s linear 0s;
+  -o-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
 }
 /* line 138, ../scss/screen.scss */
 .intro-page .intro-text a:hover .twitter-img {
@@ -191,19 +191,19 @@ body {
   height: 60px;
   background: none;
   cursor: pointer;
-  -webkit-transition: height 0.5s ease-out, background 0.25s ease-out;
-  -webkit-transition-delay: 0s, 0.25s;
-  -moz-transition: height 0.5s ease-out 0s, background 0.25s ease-out 0.25s;
-  -o-transition: height 0.5s ease-out 0s, background 0.25s ease-out 0.25s;
-  transition: height 0.5s ease-out 0s, background 0.25s ease-out 0.25s;
+  -webkit-transition: height 0.6s ease-out, background 0.3s ease-out;
+  -webkit-transition-delay: 0s, 0.3s;
+  -moz-transition: height 0.6s ease-out 0s, background 0.3s ease-out 0.3s;
+  -o-transition: height 0.6s ease-out 0s, background 0.3s ease-out 0.3s;
+  transition: height 0.6s ease-out 0s, background 0.3s ease-out 0.3s;
 }
 /* line 187, ../scss/screen.scss */
 .intro-page[data-view="collapsed"] .intro-box {
-  -webkit-transition: all 0.25s ease-out;
-  -webkit-transition-delay: 0.25s;
-  -moz-transition: all 0.25s ease-out 0.25s;
-  -o-transition: all 0.25s ease-out 0.25s;
-  transition: all 0.25s ease-out 0.25s;
+  -webkit-transition: all 0.3s ease-out;
+  -webkit-transition-delay: 0.3s;
+  -moz-transition: all 0.3s ease-out 0.3s;
+  -o-transition: all 0.3s ease-out 0.3s;
+  transition: all 0.3s ease-out 0.3s;
   top: 0;
   transform: translateX(-50%) translateY(0);
   -webkit-transform: translateX(-50%) translateY(0);
@@ -217,11 +217,11 @@ body {
   height: 20px;
   margin-top: 19px;
   background-image: url("../images/logo-red.png");
-  -webkit-transition: all 0.25s ease-out;
-  -webkit-transition-delay: 0.25s;
-  -moz-transition: all 0.25s ease-out 0.25s;
-  -o-transition: all 0.25s ease-out 0.25s;
-  transition: all 0.25s ease-out 0.25s;
+  -webkit-transition: all 0.3s ease-out;
+  -webkit-transition-delay: 0.3s;
+  -moz-transition: all 0.3s ease-out 0.3s;
+  -o-transition: all 0.3s ease-out 0.3s;
+  transition: all 0.3s ease-out 0.3s;
 }
 /* line 199, ../scss/screen.scss */
 .intro-page[data-view="collapsed"] .intro-link, .intro-page[data-view="collapsed"]:after {
