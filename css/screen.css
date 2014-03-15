@@ -227,3 +227,12 @@ body {
 .intro-page[data-view="collapsed"] .intro-link, .intro-page[data-view="collapsed"]:after {
   display: block;
 }
+
+/*----- Intro Page -----*/
+/* line 209, ../scss/screen.scss */
+.work-page .item-box {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: #8fbfca;
+}

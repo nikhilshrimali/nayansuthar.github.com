@@ -199,3 +199,17 @@ body { padding-top: $header-height }
         .intro-link, &:after { display: block }
     }
 }
+
+
+
+
+
+/*----- Intro Page -----*/
+.work-page {
+    .item-box {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        color: $color-aqua;
+    }
+}
