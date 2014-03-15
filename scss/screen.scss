@@ -1,5 +1,9 @@
 @import "compass";
 
+
+
+
+
 /*----- Variables -----*/
 $color-aqua      : #8fbfca;
 $color-red       : #e15842;
@@ -7,8 +11,14 @@ $color-red-dark  : #dd4831;
 $color-bg        : #f0f6f7;
 
 $gutter          : 12px;
+$page-max-width  : 740px;
+$header-height   : 60px;
 
 
+
+
+
+/*----- Mixins -----*/
 @mixin animation ($name:no-name, $dur:3s, $tf:linear, $itc:infinite, $del:0s ) {
     animation: $name $dur $tf $itc $del;
     -webkit-animation: $name $dur $tf $itc $del;
@@ -16,7 +26,6 @@ $gutter          : 12px;
     -ms-animation: $name $dur $tf $itc $del;
     -o-animation: $name $dur $tf $itc $del;
 }
-
 @mixin keyframes ($name) {
     @keyframes $name { @content }
     @-webkit-keyframes $name { @content }
@@ -24,7 +33,6 @@ $gutter          : 12px;
     @-ms-keyframes $name { @content }
     @-o-keyframes $name { @content }
 }
-
 @mixin my-transform ($value) {
     transform: $value;
     -webkit-transform: $value;
@@ -34,6 +42,10 @@ $gutter          : 12px;
 }
 
 
+
+
+
+/*----- Common Styles -----*/
 * {
     padding: 0;
     margin: 0;
@@ -44,24 +56,48 @@ $gutter          : 12px;
     letter-spacing: 0.04em;
 }
 
+
+
+
+
+/*----- Page Layout -----*/
 html, body {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    background-color: $color-bg;
+    background-image: url("../images/bg-texture.png");
 }
-
-body {
-    padding-top: 60px;
-}
-
-.intro-page, .work-page {
+body { padding-top: $header-height }
+.intro-page {
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    .page-content {
-        width: 740px;
+    overflow: hidden;
+    background-color: $color-aqua;
+    background-image: url("../images/bg-texture.png");
+    color: #fff;
+    z-index: 2;
+}
+.work-page {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+
+
+
+/*----- Intro Page -----*/
+.intro-page {
+    @include transition(height 0.5s ease-out 0s, background 0.25s ease-out 0s);
+    &.accelarate { @include translate3d(0, 0, 0) }
+    .intro-box {
+        width: $page-max-width;
         max-width: 100%;
         height: 400px;
         max-height: 100%;
@@ -69,20 +105,17 @@ body {
         top: 50%;
         left: 50%;
         padding: 0 $gutter;
-        @include my-transform(translateX(-50%) translateY(-50%));
         text-align: center;
+        @include my-transform(translateX(-50%) translateY(-50%));
+        @include transition(all 0.25s ease-out 0s)
     }
-}
-
-.intro-page {
-    background-color: $color-aqua;
-    background-image: url("../images/bg-texture.png");
-    color: #fff;
-    z-index: 2;
     .logo-img {
         width: 90px;
         height: 40px;
         margin: 0 auto;
+        background-image: url("../images/logo.png");
+        background-size: 100% 100%;
+        @include transition(all 0.25s ease-out 0s);
     }
     .intro-text {
         width: 100%;
@@ -120,7 +153,49 @@ body {
         background: $color-red;
         border: 1px solid $color-red-dark;
         color: #fff;
+        cursor: pointer;
         @include text-shadow(0 -1px 0 $color-red-dark);
         @include box-shadow(0 0 1px 1px rgba(#fff, 0.1));
+    }
+    .intro-link {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include opacity(0);
+        display: none;
+        z-index: 10;
+    }
+    &:after {
+        content: "";
+        display: none;
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        bottom: 1px;
+        left: 0;
+        background: rgba($color-aqua, 0.25);
+        @include box-shadow(0 1px 0 0 rgba(#fff, 0.5));
+    }
+
+    &[data-view="collapsed"]{
+        height: $header-height;
+        background: none;
+        cursor: pointer;
+        @include transition(height 0.5s ease-out 0s, background 0.25s ease-out 0.25s);
+        .intro-box {
+            @include transition(all 0.25s ease-out 0.25s);
+            top: 0;
+            @include my-transform(translateX(-50%) translateY(0));
+        }
+        .logo-img {
+            width: 45px;
+            height: 20px;
+            margin-top: ($header-height/2 - 11);
+            background-image: url("../images/logo-red.png");
+            @include transition(all 0.25s ease-out 0.25s);
+        }
+        .intro-link, &:after { display: block }
     }
 }

@@ -1,5 +1,7 @@
 /*----- Variables -----*/
-/* line 37, ../scss/screen.scss */
+/*----- Mixins -----*/
+/*----- Common Styles -----*/
+/* line 49, ../scss/screen.scss */
 * {
   padding: 0;
   margin: 0;
@@ -12,28 +14,62 @@
   letter-spacing: 0.04em;
 }
 
-/* line 47, ../scss/screen.scss */
+/*----- Page Layout -----*/
+/* line 64, ../scss/screen.scss */
 html, body {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  background-color: #f0f6f7;
+  background-image: url("../images/bg-texture.png");
 }
 
-/* line 53, ../scss/screen.scss */
+/* line 71, ../scss/screen.scss */
 body {
   padding-top: 60px;
 }
 
-/* line 57, ../scss/screen.scss */
-.intro-page, .work-page {
+/* line 72, ../scss/screen.scss */
+.intro-page {
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  overflow: hidden;
+  background-color: #8fbfca;
+  background-image: url("../images/bg-texture.png");
+  color: #fff;
+  z-index: 2;
 }
-/* line 63, ../scss/screen.scss */
-.intro-page .page-content, .work-page .page-content {
+
+/* line 84, ../scss/screen.scss */
+.work-page {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/*----- Intro Page -----*/
+/* line 96, ../scss/screen.scss */
+.intro-page {
+  -webkit-transition: height 0.5s ease-out, background 0.25s ease-out;
+  -webkit-transition-delay: 0s, 0s;
+  -moz-transition: height 0.5s ease-out 0s, background 0.25s ease-out 0s;
+  -o-transition: height 0.5s ease-out 0s, background 0.25s ease-out 0s;
+  transition: height 0.5s ease-out 0s, background 0.25s ease-out 0s;
+}
+/* line 98, ../scss/screen.scss */
+.intro-page.accelarate {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+/* line 99, ../scss/screen.scss */
+.intro-page .intro-box {
   width: 740px;
   max-width: 100%;
   height: 400px;
@@ -42,28 +78,32 @@ body {
   top: 50%;
   left: 50%;
   padding: 0 12px;
+  text-align: center;
   transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translateX(-50%) translateY(-50%);
   -moz-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
   -o-transform: translateX(-50%) translateY(-50%);
-  text-align: center;
+  -webkit-transition: all 0.25s ease-out;
+  -webkit-transition-delay: 0s;
+  -moz-transition: all 0.25s ease-out 0s;
+  -o-transition: all 0.25s ease-out 0s;
+  transition: all 0.25s ease-out 0s;
 }
-
-/* line 77, ../scss/screen.scss */
-.intro-page {
-  background-color: #8fbfca;
-  background-image: url("../images/bg-texture.png");
-  color: #fff;
-  z-index: 2;
-}
-/* line 82, ../scss/screen.scss */
+/* line 112, ../scss/screen.scss */
 .intro-page .logo-img {
   width: 90px;
   height: 40px;
   margin: 0 auto;
+  background-image: url("../images/logo.png");
+  background-size: 100% 100%;
+  -webkit-transition: all 0.25s ease-out;
+  -webkit-transition-delay: 0s;
+  -moz-transition: all 0.25s ease-out 0s;
+  -o-transition: all 0.25s ease-out 0s;
+  transition: all 0.25s ease-out 0s;
 }
-/* line 87, ../scss/screen.scss */
+/* line 120, ../scss/screen.scss */
 .intro-page .intro-text {
   width: 100%;
   max-height: 100%;
@@ -77,11 +117,11 @@ body {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
 }
-/* line 95, ../scss/screen.scss */
+/* line 128, ../scss/screen.scss */
 .intro-page .intro-text p {
   margin-bottom: 24px;
 }
-/* line 98, ../scss/screen.scss */
+/* line 131, ../scss/screen.scss */
 .intro-page .intro-text a .twitter-img {
   width: 24px;
   height: 20px;
@@ -94,12 +134,12 @@ body {
   -o-transition: all 0.25s linear 0s;
   transition: all 0.25s linear 0s;
 }
-/* line 105, ../scss/screen.scss */
+/* line 138, ../scss/screen.scss */
 .intro-page .intro-text a:hover .twitter-img {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-/* line 109, ../scss/screen.scss */
+/* line 142, ../scss/screen.scss */
 .intro-page .work-link {
   width: 160px;
   height: 40px;
@@ -114,8 +154,76 @@ body {
   background: #e15842;
   border: 1px solid #dd4831;
   color: #fff;
+  cursor: pointer;
   text-shadow: 0 -1px 0 #dd4831;
   -webkit-box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.1);
   -moz-box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+/* line 160, ../scss/screen.scss */
+.intro-page .intro-link {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  display: none;
+  z-index: 10;
+}
+/* line 170, ../scss/screen.scss */
+.intro-page:after {
+  content: "";
+  display: none;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  background: rgba(143, 191, 202, 0.25);
+  -webkit-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5);
+  -moz-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5);
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5);
+}
+/* line 182, ../scss/screen.scss */
+.intro-page[data-view="collapsed"] {
+  height: 60px;
+  background: none;
+  cursor: pointer;
+  -webkit-transition: height 0.5s ease-out, background 0.25s ease-out;
+  -webkit-transition-delay: 0s, 0.25s;
+  -moz-transition: height 0.5s ease-out 0s, background 0.25s ease-out 0.25s;
+  -o-transition: height 0.5s ease-out 0s, background 0.25s ease-out 0.25s;
+  transition: height 0.5s ease-out 0s, background 0.25s ease-out 0.25s;
+}
+/* line 187, ../scss/screen.scss */
+.intro-page[data-view="collapsed"] .intro-box {
+  -webkit-transition: all 0.25s ease-out;
+  -webkit-transition-delay: 0.25s;
+  -moz-transition: all 0.25s ease-out 0.25s;
+  -o-transition: all 0.25s ease-out 0.25s;
+  transition: all 0.25s ease-out 0.25s;
+  top: 0;
+  transform: translateX(-50%) translateY(0);
+  -webkit-transform: translateX(-50%) translateY(0);
+  -moz-transform: translateX(-50%) translateY(0);
+  -ms-transform: translateX(-50%) translateY(0);
+  -o-transform: translateX(-50%) translateY(0);
+}
+/* line 192, ../scss/screen.scss */
+.intro-page[data-view="collapsed"] .logo-img {
+  width: 45px;
+  height: 20px;
+  margin-top: 19px;
+  background-image: url("../images/logo-red.png");
+  -webkit-transition: all 0.25s ease-out;
+  -webkit-transition-delay: 0.25s;
+  -moz-transition: all 0.25s ease-out 0.25s;
+  -o-transition: all 0.25s ease-out 0.25s;
+  transition: all 0.25s ease-out 0.25s;
+}
+/* line 199, ../scss/screen.scss */
+.intro-page[data-view="collapsed"] .intro-link, .intro-page[data-view="collapsed"]:after {
+  display: block;
 }
