@@ -1,7 +1,7 @@
 /*----- Variables -----*/
 /*----- Mixins -----*/
 /*----- Common Styles -----*/
-/* line 49, ../scss/screen.scss */
+/* line 50, ../scss/screen.scss */
 * {
   padding: 0;
   margin: 0;
@@ -15,7 +15,7 @@
 }
 
 /*----- Page Layout -----*/
-/* line 64, ../scss/screen.scss */
+/* line 65, ../scss/screen.scss */
 html, body {
   width: 100%;
   height: 100%;
@@ -24,12 +24,12 @@ html, body {
   background-image: url("../images/bg-texture.png");
 }
 
-/* line 71, ../scss/screen.scss */
+/* line 72, ../scss/screen.scss */
 body {
   padding-top: 60px;
 }
 
-/* line 72, ../scss/screen.scss */
+/* line 73, ../scss/screen.scss */
 .intro-page {
   width: 100%;
   height: 100%;
@@ -43,7 +43,7 @@ body {
   z-index: 3;
 }
 
-/* line 84, ../scss/screen.scss */
+/* line 85, ../scss/screen.scss */
 .work-page {
   position: absolute;
   top: 60px;
@@ -56,7 +56,7 @@ body {
   z-index: 1;
 }
 
-/* line 95, ../scss/screen.scss */
+/* line 96, ../scss/screen.scss */
 .scroll-bar {
   width: 10px;
   height: 50px;
@@ -75,7 +75,7 @@ body {
 }
 
 /*----- Intro Page -----*/
-/* line 113, ../scss/screen.scss */
+/* line 114, ../scss/screen.scss */
 .intro-page {
   -webkit-transition: height 0.6s ease-out, background 0.3s ease-out;
   -webkit-transition-delay: 0s, 0s;
@@ -83,7 +83,7 @@ body {
   -o-transition: height 0.6s ease-out 0s, background 0.3s ease-out 0s;
   transition: height 0.6s ease-out 0s, background 0.3s ease-out 0s;
 }
-/* line 115, ../scss/screen.scss */
+/* line 116, ../scss/screen.scss */
 .intro-page .intro-box {
   width: 740px;
   max-width: 100%;
@@ -105,7 +105,7 @@ body {
   -o-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
 }
-/* line 128, ../scss/screen.scss */
+/* line 129, ../scss/screen.scss */
 .intro-page .logo-img {
   width: 90px;
   height: 40px;
@@ -118,7 +118,7 @@ body {
   -o-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
 }
-/* line 136, ../scss/screen.scss */
+/* line 137, ../scss/screen.scss */
 .intro-page .intro-text {
   width: 100%;
   max-height: 100%;
@@ -132,11 +132,11 @@ body {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
 }
-/* line 144, ../scss/screen.scss */
+/* line 145, ../scss/screen.scss */
 .intro-page .intro-text p {
   margin-bottom: 24px;
 }
-/* line 147, ../scss/screen.scss */
+/* line 148, ../scss/screen.scss */
 .intro-page .intro-text a .twitter-img {
   width: 24px;
   height: 20px;
@@ -149,12 +149,12 @@ body {
   -o-transition: all 0.3s linear 0s;
   transition: all 0.3s linear 0s;
 }
-/* line 154, ../scss/screen.scss */
+/* line 155, ../scss/screen.scss */
 .intro-page .intro-text a:hover .twitter-img {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-/* line 158, ../scss/screen.scss */
+/* line 159, ../scss/screen.scss */
 .intro-page .work-link {
   width: 160px;
   height: 40px;
@@ -175,7 +175,7 @@ body {
   -moz-box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.1);
 }
-/* line 176, ../scss/screen.scss */
+/* line 177, ../scss/screen.scss */
 .intro-page .intro-link {
   width: 100%;
   height: 100%;
@@ -187,7 +187,7 @@ body {
   display: none;
   z-index: 10;
 }
-/* line 186, ../scss/screen.scss */
+/* line 187, ../scss/screen.scss */
 .intro-page:after {
   content: "";
   display: none;
@@ -196,12 +196,12 @@ body {
   position: absolute;
   bottom: 1px;
   left: 0;
-  background: rgba(143, 191, 202, 0.25);
+  background: rgba(0, 0, 0, 0.05);
   -webkit-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5);
   -moz-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5);
   box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5);
 }
-/* line 199, ../scss/screen.scss */
+/* line 200, ../scss/screen.scss */
 .intro-page.accelerate, .intro-page.accelerate .intro-box, .intro-page.accelerate .logo-img {
   -webkit-perspective: 1000;
   -moz-perspective: 1000;
@@ -209,7 +209,7 @@ body {
   -o-perspective: 1000;
   perspective: 1000;
 }
-/* line 204, ../scss/screen.scss */
+/* line 205, ../scss/screen.scss */
 .intro-page[data-view="collapsed"] {
   height: 60px;
   background-color: #f0f6f7;
@@ -220,7 +220,7 @@ body {
   -o-transition: height 0.6s ease-out 0s, background 0.3s ease-out 0.3s;
   transition: height 0.6s ease-out 0s, background 0.3s ease-out 0.3s;
 }
-/* line 209, ../scss/screen.scss */
+/* line 210, ../scss/screen.scss */
 .intro-page[data-view="collapsed"] .intro-box {
   -webkit-transition: all 0.3s ease-out;
   -webkit-transition-delay: 0.3s;
@@ -234,7 +234,7 @@ body {
   -ms-transform: translateX(-50%) translateY(0);
   -o-transform: translateX(-50%) translateY(0);
 }
-/* line 214, ../scss/screen.scss */
+/* line 215, ../scss/screen.scss */
 .intro-page[data-view="collapsed"] .logo-img {
   width: 45px;
   height: 20px;
@@ -246,16 +246,44 @@ body {
   -o-transition: all 0.3s ease-out 0.3s;
   transition: all 0.3s ease-out 0.3s;
 }
-/* line 221, ../scss/screen.scss */
+/* line 222, ../scss/screen.scss */
 .intro-page[data-view="collapsed"] .intro-link, .intro-page[data-view="collapsed"]:after {
   display: block;
 }
 
 /*----- Intro Page -----*/
-/* line 229, ../scss/screen.scss */
+/* line 230, ../scss/screen.scss */
 .work-page .item-box {
   width: 100%;
   height: 100%;
   text-align: center;
   color: #8fbfca;
+}
+/* line 236, ../scss/screen.scss */
+.work-page .item-content {
+  width: 740px;
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 0 12px;
+  text-align: center;
+  transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  -webkit-transition: all 0.3s ease-out;
+  -webkit-transition-delay: 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+/* line 247, ../scss/screen.scss */
+.work-page .item-content .image {
+  width: 100%;
+  margin: 0 auto 12px;
+  /* background-image: url("../images/logo.png"); */
+  /* background-size: 100% 100%; */
 }

@@ -6,6 +6,7 @@
 
 /*----- Variables -----*/
 $color-aqua      : #8fbfca;
+$color-black     : #000;
 $color-red       : #e15842;
 $color-red-dark  : #dd4831;
 $color-bg        : #f0f6f7;
@@ -191,7 +192,7 @@ body { padding-top: $header-height }
         position: absolute;
         bottom: 1px;
         left: 0;
-        background: rgba($color-aqua, 0.25);
+        background: rgba($color-black, 0.05);
         @include box-shadow(0 1px 0 0 rgba(#fff, 0.5));
     }
 
@@ -231,5 +232,23 @@ body { padding-top: $header-height }
         height: 100%;
         text-align: center;
         color: $color-aqua;
+    }
+    .item-content {
+        width: $page-max-width;
+        max-width: 100%;
+        max-height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        padding: 0 $gutter;
+        text-align: center;
+        @include my-transform(translateX(-50%) translateY(-50%));
+        @include transition(all 0.3s ease-out 0s);
+        .image {
+            width: 100%;
+            margin: 0 auto $gutter;
+            /* background-image: url("../images/logo.png"); */
+            /* background-size: 100% 100%; */
+        }
     }
 }
