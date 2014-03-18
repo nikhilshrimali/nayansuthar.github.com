@@ -41,66 +41,8 @@ body {
   padding-top: 60px;
 }
 
-/* line 75, ../scss/screen.scss */
-.page-header {
-  width: 100%;
-  height: 60px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-}
-/* line 82, ../scss/screen.scss */
-.page-header:after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1px;
-  position: absolute;
-  bottom: 1px;
-  left: 0;
-  background: rgba(0, 0, 0, 0.05);
-  -webkit-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5);
-  -moz-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5);
-  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5);
-}
-/* line 93, ../scss/screen.scss */
-.page-header .logo-img {
-  width: 45px;
-  height: 20px;
-  margin: 19px auto 0;
-  background-image: url("../images/logo-red.png");
-  background-size: 100% 100%;
-}
-
-/* line 101, ../scss/screen.scss */
-.page-content-wrapper {
-  position: absolute;
-  top: 60px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-/* line 109, ../scss/screen.scss */
-.page-content-wrapper .page-content {
-  width: 740px;
-  max-width: 100%;
-  height: 400px;
-  max-height: 100%;
-  padding: 24px;
-  margin: 0 auto;
-  color: #8fbfca;
-  text-align: center;
-}
-/* line 118, ../scss/screen.scss */
-.page-content-wrapper .page-content .image {
-  width: 100%;
-  margin: 12px auto;
-}
-
-/* line 124, ../scss/screen.scss */
+/*----- Intro Page -----*/
+/* line 81, ../scss/screen.scss */
 .intro-page {
   width: 100%;
   height: 100%;
@@ -112,49 +54,13 @@ body {
   background-image: url("../images/bg-texture.png");
   color: #fff;
   z-index: 3;
-}
-
-/* line 136, ../scss/screen.scss */
-.work-page {
-  position: absolute;
-  top: 60px;
-  bottom: 0;
-  left: 0;
-  right: -50px;
-  padding-right: 50px;
-  overflow-x: hidden;
-  overflow-y: auto;
-  z-index: 1;
-}
-
-/* line 147, ../scss/screen.scss */
-.scroll-bar {
-  width: 10px;
-  height: 50px;
-  background-color: #8fbfca;
-  background-image: url("../images/scroll-bar.png");
-  background-size: 100% 100%;
-  position: absolute;
-  right: 0;
-  top: 60px;
-  -webkit-transition: all 0.2s ease-out;
-  -webkit-transition-delay: 0;
-  -moz-transition: all 0.2s ease-out 0;
-  -o-transition: all 0.2s ease-out 0;
-  transition: all 0.2s ease-out 0;
-  z-index: 2;
-}
-
-/*----- Intro Page -----*/
-/* line 165, ../scss/screen.scss */
-.intro-page {
   -webkit-transition: height 0.6s ease-out, background 0.3s ease-out;
   -webkit-transition-delay: 0s, 0s;
   -moz-transition: height 0.6s ease-out 0s, background 0.3s ease-out 0s;
   -o-transition: height 0.6s ease-out 0s, background 0.3s ease-out 0s;
   transition: height 0.6s ease-out 0s, background 0.3s ease-out 0s;
 }
-/* line 167, ../scss/screen.scss */
+/* line 93, ../scss/screen.scss */
 .intro-page .intro-box {
   width: 740px;
   max-width: 100%;
@@ -176,7 +82,7 @@ body {
   -o-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
 }
-/* line 180, ../scss/screen.scss */
+/* line 106, ../scss/screen.scss */
 .intro-page .logo-img {
   width: 90px;
   height: 40px;
@@ -189,7 +95,7 @@ body {
   -o-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
 }
-/* line 188, ../scss/screen.scss */
+/* line 114, ../scss/screen.scss */
 .intro-page .intro-text {
   width: 100%;
   max-height: 100%;
@@ -203,11 +109,11 @@ body {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
 }
-/* line 196, ../scss/screen.scss */
+/* line 122, ../scss/screen.scss */
 .intro-page .intro-text p {
   margin-bottom: 24px;
 }
-/* line 199, ../scss/screen.scss */
+/* line 123, ../scss/screen.scss */
 .intro-page .intro-text a .twitter-img {
   width: 24px;
   height: 20px;
@@ -220,12 +126,12 @@ body {
   -o-transition: all 0.3s linear 0s;
   transition: all 0.3s linear 0s;
 }
-/* line 206, ../scss/screen.scss */
+/* line 130, ../scss/screen.scss */
 .intro-page .intro-text a:hover .twitter-img {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-/* line 210, ../scss/screen.scss */
+/* line 134, ../scss/screen.scss */
 .intro-page .work-link {
   width: 160px;
   height: 40px;
@@ -246,7 +152,7 @@ body {
   -moz-box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.1);
 }
-/* line 228, ../scss/screen.scss */
+/* line 152, ../scss/screen.scss */
 .intro-page .intro-link {
   width: 100%;
   height: 100%;
@@ -258,7 +164,7 @@ body {
   display: none;
   z-index: 10;
 }
-/* line 238, ../scss/screen.scss */
+/* line 162, ../scss/screen.scss */
 .intro-page:after {
   content: "";
   display: none;
@@ -272,7 +178,7 @@ body {
   -moz-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5);
   box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5);
 }
-/* line 251, ../scss/screen.scss */
+/* line 175, ../scss/screen.scss */
 .intro-page.accelerate, .intro-page.accelerate .intro-box, .intro-page.accelerate .logo-img {
   -webkit-perspective: 1000;
   -moz-perspective: 1000;
@@ -280,7 +186,7 @@ body {
   -o-perspective: 1000;
   perspective: 1000;
 }
-/* line 256, ../scss/screen.scss */
+/* line 180, ../scss/screen.scss */
 .intro-page[data-view="collapsed"] {
   height: 60px;
   background-color: #f0f6f7;
@@ -291,7 +197,7 @@ body {
   -o-transition: height 0.6s ease-out 0s, background 0.3s ease-out 0.3s;
   transition: height 0.6s ease-out 0s, background 0.3s ease-out 0.3s;
 }
-/* line 261, ../scss/screen.scss */
+/* line 185, ../scss/screen.scss */
 .intro-page[data-view="collapsed"] .intro-box {
   -webkit-transition: all 0.3s ease-out;
   -webkit-transition-delay: 0.3s;
@@ -305,7 +211,7 @@ body {
   -ms-transform: translateX(-50%) translateY(0);
   -o-transform: translateX(-50%) translateY(0);
 }
-/* line 266, ../scss/screen.scss */
+/* line 190, ../scss/screen.scss */
 .intro-page[data-view="collapsed"] .logo-img {
   width: 45px;
   height: 20px;
@@ -317,42 +223,68 @@ body {
   -o-transition: all 0.3s ease-out 0.3s;
   transition: all 0.3s ease-out 0.3s;
 }
-/* line 273, ../scss/screen.scss */
+/* line 197, ../scss/screen.scss */
 .intro-page[data-view="collapsed"] .intro-link, .intro-page[data-view="collapsed"]:after {
   display: block;
 }
 
-/*----- Work Page -----*/
-/* line 281, ../scss/screen.scss */
-.work-page .item-box {
+/*----- Page Header -----*/
+/* line 206, ../scss/screen.scss */
+.page-header {
   width: 100%;
-  height: 100%;
-  text-align: center;
-  color: #8fbfca;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
-/* line 287, ../scss/screen.scss */
-.work-page .item-content {
+/* line 213, ../scss/screen.scss */
+.page-header:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  background: rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5);
+  -moz-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5);
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5);
+}
+/* line 224, ../scss/screen.scss */
+.page-header .logo-img {
+  width: 45px;
+  height: 20px;
+  margin: 19px auto 0;
+  background-image: url("../images/logo-red.png");
+  background-size: 100% 100%;
+}
+
+/*----- Page Content -----*/
+/* line 237, ../scss/screen.scss */
+.page-content-wrapper {
+  position: absolute;
+  top: 60px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+/* line 245, ../scss/screen.scss */
+.page-content-wrapper .page-content {
   width: 740px;
   max-width: 100%;
+  height: 400px;
   max-height: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  padding: 0 24px;
+  padding: 24px;
+  margin: 0 auto;
+  color: #8fbfca;
   text-align: center;
-  transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
-  -webkit-transition: all 0.3s ease-out;
-  -webkit-transition-delay: 0s;
-  -moz-transition: all 0.3s ease-out 0s;
-  -o-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s;
 }
-/* line 298, ../scss/screen.scss */
-.work-page .item-content .image {
+/* line 254, ../scss/screen.scss */
+.page-content-wrapper .page-content .image {
   width: 100%;
-  margin: 0 auto 12px;
+  margin: 12px auto;
 }

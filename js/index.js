@@ -1,20 +1,13 @@
-var winHt = window.innerHeight;
-var winWdt = window.innerWidth;
-
-
 var introPage = document.querySelector (".intro-page");
 var introFixedBox = document.querySelector (".intro-page .fixed-box");
-var workPage = document.querySelector (".work-page");
 var introLink = document.querySelector (".intro-page .intro-link");
 var workLink = document.querySelector (".intro-page .work-link");
-var scrollBar = document.querySelector (".scroll-bar");
-
 
 
 //----- Adjust page
 var adjustPage = function () {
-  winHt = window.innerHeight;
-  winWdt = window.innerWidth;
+  var winHt = window.innerHeight;
+  var winWdt = window.innerWidth;
   introFixedBox.style.height = winHt + "px";
   introFixedBox.style.width = winWdt + "px";
 }
@@ -22,13 +15,13 @@ adjustPage ();
 window.addEventListener('resize', function(e){ adjustPage () });
 
 
-//----- Switch between screens
+//----- Toggle Intro View
 workLink.addEventListener ("click", function () {
   introPage.className = introPage.className + " accelerate";
   introPage.setAttribute ("data-view", "collapsed");
   setTimeout (function () {
     introPage.className = introPage.className.replace (" accelerate", "");
-  }, 300);
+  }, 800);
 }, false);
 
 introLink.addEventListener ("click", function () {
@@ -36,13 +29,5 @@ introLink.addEventListener ("click", function () {
   introPage.setAttribute ("data-view", "full");
   setTimeout (function () {
     introPage.className = introPage.className.replace (" accelerate", "");
-  }, 300);
-}, false);
-
-
-//----- Scrolling on Work Page
-workPage.addEventListener ("scroll", function (evt) {
-  var scrollRange = workPage.offsetHeight - scrollBar.offsetHeight;
-  var scrollHt = workPage.scrollHeight - workPage.offsetHeight;
-  scrollBar.style.top = (60 + (workPage.scrollTop/scrollHt)*scrollRange)+"px";
+  }, 800);
 }, false);
