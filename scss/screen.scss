@@ -55,6 +55,8 @@ $header-height   : 60px;
     font-family: calibri, arial;
     font-size: 16px;
     letter-spacing: 0.04em;
+    @media screen and (max-width: 768px) { font-size: 15px }
+    @media screen and (max-width: 512px) { font-size: 14px }
 }
 
 
@@ -70,6 +72,55 @@ html, body {
     background-image: url("../images/bg-texture.png");
 }
 body { padding-top: $header-height }
+.page-header {
+    width: 100%;
+    height: $header-height;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    &:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        bottom: 1px;
+        left: 0;
+        background: rgba($color-black, 0.05);
+        @include box-shadow(0 1px 0 0 rgba(#fff, 0.5));
+    }
+    .logo-img {
+        width: 45px;
+        height: 20px;
+        margin: ($header-height/2 - 11) auto 0;
+        background-image: url("../images/logo-red.png");
+        background-size: 100% 100%;
+    }
+}
+.page-content-wrapper {
+    position: absolute;
+    top: $header-height;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    .page-content {
+        width: $page-max-width;
+        max-width: 100%;
+        height: 400px;
+        max-height: 100%;
+        padding: $gutter*2;
+        margin: 0 auto;
+        color: $color-aqua;
+        text-align: center;
+        .image {
+            width: 100%;
+            margin: $gutter auto;
+        }
+    }
+}
 .intro-page {
     width: 100%;
     height: 100%;
@@ -121,7 +172,7 @@ body { padding-top: $header-height }
         position: absolute;
         top: 50%;
         left: 50%;
-        padding: 0 $gutter;
+        padding: 0 $gutter*2;
         text-align: center;
         @include my-transform(translateX(-50%) translateY(-50%));
         @include transition(all 0.3s ease-out 0s)
@@ -225,7 +276,7 @@ body { padding-top: $header-height }
 
 
 
-/*----- Intro Page -----*/
+/*----- Work Page -----*/
 .work-page {
     .item-box {
         width: 100%;
@@ -240,15 +291,13 @@ body { padding-top: $header-height }
         position: absolute;
         top: 50%;
         left: 50%;
-        padding: 0 $gutter;
+        padding: 0 $gutter*2;
         text-align: center;
         @include my-transform(translateX(-50%) translateY(-50%));
         @include transition(all 0.3s ease-out 0s);
         .image {
             width: 100%;
             margin: 0 auto $gutter;
-            /* background-image: url("../images/logo.png"); */
-            /* background-size: 100% 100%; */
         }
     }
 }
