@@ -1,7 +1,7 @@
+/*----- Import -----*/
 /*----- Variables -----*/
-/*----- Mixins -----*/
 /*----- Common Styles -----*/
-/* line 50, ../scss/screen.scss */
+/* line 20, ../scss/screen.scss */
 * {
   padding: 0;
   margin: 0;
@@ -9,282 +9,107 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: calibri, arial;
-  font-size: 16px;
-  letter-spacing: 0.04em;
+  font-family: tahoma, calibri, arial;
+  font-size: 14px;
+  letter-spacing: 0.07em;
 }
 @media screen and (max-width: 768px) {
-  /* line 50, ../scss/screen.scss */
+  /* line 20, ../scss/screen.scss */
   * {
-    font-size: 15px;
-  }
-}
-@media screen and (max-width: 512px) {
-  /* line 50, ../scss/screen.scss */
-  * {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 
-/*----- Page Layout -----*/
-/* line 67, ../scss/screen.scss */
-html, body {
+/* line 30, ../scss/screen.scss */
+html {
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   background-color: #f0f6f7;
   background-image: url("../images/bg-texture.png");
 }
 
-/* line 74, ../scss/screen.scss */
+/* line 38, ../scss/screen.scss */
 body {
-  padding-top: 60px;
+  width: 100%;
+  height: auto;
 }
 
-/*----- Intro Page -----*/
-/* line 81, ../scss/screen.scss */
-.intro-page {
+/*----- Elements -----*/
+/* line 48, ../scss/screen.scss */
+.page {
   width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  background-color: #8fbfca;
-  background-image: url("../images/bg-texture.png");
-  color: #fff;
-  z-index: 3;
-  -webkit-transition: height 0.6s ease-out, background 0.3s ease-out;
-  -webkit-transition-delay: 0s, 0s;
-  -moz-transition: height 0.6s ease-out 0s, background 0.3s ease-out 0s;
-  -o-transition: height 0.6s ease-out 0s, background 0.3s ease-out 0s;
-  transition: height 0.6s ease-out 0s, background 0.3s ease-out 0s;
-}
-/* line 93, ../scss/screen.scss */
-.intro-page .intro-box {
-  width: 740px;
-  max-width: 100%;
-  height: 400px;
-  max-height: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  padding: 0 24px;
+  clear: both;
   text-align: center;
-  transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
-  -webkit-transition: all 0.3s ease-out;
-  -webkit-transition-delay: 0s;
-  -moz-transition: all 0.3s ease-out 0s;
-  -o-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s;
 }
-/* line 106, ../scss/screen.scss */
-.intro-page .logo-img {
+/* line 52, ../scss/screen.scss */
+.page .page-content {
+  max-width: 740px;
+  padding: 125px 25px;
+  margin: 0 auto;
+}
+
+/* line 58, ../scss/screen.scss */
+.image {
+  width: 100%;
+  margin: 0 auto 25px;
+}
+
+/* line 62, ../scss/screen.scss */
+p {
+  margin-bottom: 125px;
+  color: #8fbfca;
+}
+/* line 65, ../scss/screen.scss */
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* line 68, ../scss/screen.scss */
+.logo-img {
   width: 90px;
   height: 40px;
-  margin: 0 auto;
   background-image: url("../images/logo.png");
   background-size: 100% 100%;
-  -webkit-transition: all 0.3s ease-out;
-  -webkit-transition-delay: 0s;
-  -moz-transition: all 0.3s ease-out 0s;
-  -o-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s;
 }
-/* line 114, ../scss/screen.scss */
-.intro-page .intro-text {
-  width: 100%;
-  max-height: 100%;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  padding: 0 12px;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-}
-/* line 122, ../scss/screen.scss */
-.intro-page .intro-text p {
-  margin-bottom: 24px;
-}
-/* line 123, ../scss/screen.scss */
-.intro-page .intro-text a .twitter-img {
+
+/* line 74, ../scss/screen.scss */
+a .twitter-img {
   width: 24px;
   height: 20px;
   margin: 0 auto;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
-  -webkit-transition: all 0.3s linear;
-  -webkit-transition-delay: 0s;
-  -moz-transition: all 0.3s linear 0s;
-  -o-transition: all 0.3s linear 0s;
-  transition: all 0.3s linear 0s;
 }
-/* line 130, ../scss/screen.scss */
-.intro-page .intro-text a:hover .twitter-img {
+/* line 79, ../scss/screen.scss */
+a .twitter-img:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-/* line 134, ../scss/screen.scss */
-.intro-page .work-link {
-  width: 160px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  font-weight: bold;
-  text-transform: uppercase;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  margin-left: -80px;
-  background: #e15842;
-  border: 1px solid #dd4831;
+
+/*----- Pages -----*/
+/* line 87, ../scss/screen.scss */
+.intro-page {
+  background-color: #8fbfca;
+  background-image: url("../images/bg-texture.png");
+  -webkit-box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.07) inset;
+  -moz-box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.07) inset;
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.07) inset;
+}
+/* line 91, ../scss/screen.scss */
+.intro-page .logo-img {
+  margin: 0 auto 75px;
+}
+/* line 92, ../scss/screen.scss */
+.intro-page p {
   color: #fff;
-  cursor: pointer;
-  text-shadow: 0 -1px 0 #dd4831;
-  -webkit-box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.1);
-  -moz-box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.1);
-}
-/* line 152, ../scss/screen.scss */
-.intro-page .intro-link {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-  display: none;
-  z-index: 10;
-}
-/* line 162, ../scss/screen.scss */
-.intro-page:after {
-  content: "";
-  display: none;
-  width: 100%;
-  height: 1px;
-  position: absolute;
-  bottom: 1px;
-  left: 0;
-  background: rgba(0, 0, 0, 0.05);
-  -webkit-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5);
-  -moz-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5);
-  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5);
-}
-/* line 175, ../scss/screen.scss */
-.intro-page.accelerate, .intro-page.accelerate .intro-box, .intro-page.accelerate .logo-img {
-  -webkit-perspective: 1000;
-  -moz-perspective: 1000;
-  -ms-perspective: 1000;
-  -o-perspective: 1000;
-  perspective: 1000;
-}
-/* line 180, ../scss/screen.scss */
-.intro-page[data-view="collapsed"] {
-  height: 60px;
-  background-color: #f0f6f7;
-  cursor: pointer;
-  -webkit-transition: height 0.6s ease-out, background 0.3s ease-out;
-  -webkit-transition-delay: 0s, 0.3s;
-  -moz-transition: height 0.6s ease-out 0s, background 0.3s ease-out 0.3s;
-  -o-transition: height 0.6s ease-out 0s, background 0.3s ease-out 0.3s;
-  transition: height 0.6s ease-out 0s, background 0.3s ease-out 0.3s;
-}
-/* line 185, ../scss/screen.scss */
-.intro-page[data-view="collapsed"] .intro-box {
-  -webkit-transition: all 0.3s ease-out;
-  -webkit-transition-delay: 0.3s;
-  -moz-transition: all 0.3s ease-out 0.3s;
-  -o-transition: all 0.3s ease-out 0.3s;
-  transition: all 0.3s ease-out 0.3s;
-  top: 0;
-  transform: translateX(-50%) translateY(0);
-  -webkit-transform: translateX(-50%) translateY(0);
-  -moz-transform: translateX(-50%) translateY(0);
-  -ms-transform: translateX(-50%) translateY(0);
-  -o-transform: translateX(-50%) translateY(0);
-}
-/* line 190, ../scss/screen.scss */
-.intro-page[data-view="collapsed"] .logo-img {
-  width: 45px;
-  height: 20px;
-  margin-top: 19px;
-  background-image: url("../images/logo-red.png");
-  -webkit-transition: all 0.3s ease-out;
-  -webkit-transition-delay: 0.3s;
-  -moz-transition: all 0.3s ease-out 0.3s;
-  -o-transition: all 0.3s ease-out 0.3s;
-  transition: all 0.3s ease-out 0.3s;
-}
-/* line 197, ../scss/screen.scss */
-.intro-page[data-view="collapsed"] .intro-link, .intro-page[data-view="collapsed"]:after {
-  display: block;
+  margin-bottom: 75px;
 }
 
-/*----- Page Header -----*/
-/* line 206, ../scss/screen.scss */
-.page-header {
-  width: 100%;
-  height: 60px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-}
-/* line 213, ../scss/screen.scss */
-.page-header:after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1px;
-  position: absolute;
-  bottom: 1px;
-  left: 0;
-  background: rgba(0, 0, 0, 0.05);
-  -webkit-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5);
-  -moz-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5);
-  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5);
-}
-/* line 224, ../scss/screen.scss */
-.page-header .logo-img {
-  width: 45px;
-  height: 20px;
-  margin: 19px auto 0;
-  background-image: url("../images/logo-red.png");
-  background-size: 100% 100%;
-}
-
-/*----- Page Content -----*/
-/* line 237, ../scss/screen.scss */
-.page-content-wrapper {
-  position: absolute;
-  top: 60px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-/* line 245, ../scss/screen.scss */
-.page-content-wrapper .page-content {
-  width: 740px;
-  max-width: 100%;
-  height: 400px;
-  max-height: 100%;
-  padding: 24px;
-  margin: 0 auto;
-  color: #8fbfca;
-  text-align: center;
-}
-/* line 254, ../scss/screen.scss */
-.page-content-wrapper .page-content .image {
-  width: 100%;
-  margin: 12px auto;
+/* line 97, ../scss/screen.scss */
+.work-page {
+  -webkit-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.7) inset;
+  -moz-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.7) inset;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.7) inset;
 }
