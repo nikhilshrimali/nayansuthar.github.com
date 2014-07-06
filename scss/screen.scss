@@ -1,31 +1,35 @@
-/*----- Import -----*/
 @import "compass";
 
-/*----- Variables -----*/
-$color-aqua      : #8fbfca;
-$color-red       : #e15842;
-$color-red-dark  : #dd4831;
-$color-black     : #000;
-$color-bg        : #f0f6f7;
-
-$gutter          : 25px;
-$header-height   : 60px;
-$page-max-width  : 740px;
 
 
 
 
+/*-- Variables --*/
+$color-bg         : #f9fafb;
+$color-black      : #363b47;
+$color-red        : #e15842;
 
-/*----- Common Styles -----*/
+$grid             : 90px;
+$gutter           : 15px;
+$page-max-width   : 540px;
+
+$body-font-size   : 15px;
+$footer-font-size : 12px;
+
+$social-icon-size : 24px;
+
+
+
+
+/*-- Common Styles --*/
 * {
     padding: 0;
     margin: 0;
     position: relative;
     @include box-sizing(border-box);
     font-family: tahoma, calibri, arial;
-    font-size: 14px;
-    letter-spacing: 0.07em;
-    @media screen and (max-width: 768px) { font-size: 13px }
+    font-size: $body-font-size;
+    letter-spacing: 0.05em;
 }
 html {
     width: 100%;
@@ -33,67 +37,101 @@ html {
     overflow-x: hidden;
     overflow-y: auto;
     background-color: $color-bg;
-    background-image: url("../images/bg-texture.png");
+    padding: 0 $gutter*2;
 }
 body {
-    width: 100%;
+    max-width: $page-max-width;
     height: auto;
-}
-
-
-
-
-
-/*----- Elements -----*/
-.page {
-    width: 100%;
-    clear: both;
-    text-align: center;
-    .page-content {
-        max-width: $page-max-width;
-        padding: $gutter*5 $gutter;
-        margin: 0 auto;
-    }
-}
-.image {
-    width: 100%;
-    margin: 0 auto $gutter;
-}
-p {
-    margin-bottom: $gutter*5;
-    color: $color-aqua;
-    &:last-child { margin-bottom: 0 }
-}
-
-.logo-img {
-    width: 90px;
-    height: 40px;
-    background-image: url("../images/logo.png");
-    background-size: 100% 100%;
-}
-a .twitter-img {
-    width: 24px;
-    height: 20px;
     margin: 0 auto;
-    @include opacity(0.5);
-    &:hover { @include opacity(1) }
 }
 
 
 
 
 
-/*----- Pages -----*/
-.intro-page {
-    background-color: $color-aqua;
-    background-image: url("../images/bg-texture.png");
-    @include box-shadow(0 -1px 0 0 rgba(#000, 0.07) inset);
-    .logo-img { margin: 0 auto $gutter*3 }
-    p {
-        color: #fff;
-        margin-bottom: $gutter*3;
+/*-- Layout --*/
+.row {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+
+
+
+/*-- Text --*/
+.text {
+    width: 100%;
+    color: $color-black;
+    cursor: default;
+    &.intro {
+        height: $grid;
+        margin-top: $grid*2;
+        text-align: center;
+    }
+    &.footer {
+        margin-top: $grid;
+        margin-bottom: $grid;
+        font-size: $footer-font-size;
+        text-align: center;
+        color: rgba($color-black, 0.6);
     }
 }
-.work-page {
-    @include box-shadow(0 1px 0 0 rgba(#fff, 0.7) inset);
+
+
+
+
+
+/*-- Social Links --*/
+.social-icons-wrapper {
+    width: 100%;
+    height: $social-icon-size;
+    margin: 0 0 ($grid*2 - $social-icon-size);
+    text-align: center;
+}
+.social-icon {
+    display: inline-block;
+    width: $social-icon-size;
+    height: $social-icon-size;
+    margin: 0 $gutter 0 0;
+    @include opacity(0.95);
+    &:hover { @include opacity(1) }
+
+    &.twitter {
+        background: url("../images/twitter-icon.png") center no-repeat;
+        background-size: contain;
+    }
+}
+
+
+
+
+
+/*-- Separator Line --*/
+.separator-line {
+    width: $grid*2;
+    height: 1px;
+    background: -webkit-linear-gradient(left,$color-bg,$color-black,$color-bg);
+    margin: 0 auto;
+    margin-bottom: ($grid*2 - 1px);
+    @include opacity(0.2);
+    &.top-margin { margin-top: $grid*2; }
+}
+
+
+
+
+/*-- Work Card --*/
+.work-card {
+    width: $grid*2;
+    height: $grid*2;
+    float: left;
+    padding: 0 $gutter/3 $gutter;
+    &:first-child { padding: 0 $gutter*2/3 $gutter 0; }
+    &:last-child { padding: 0 0 $gutter $gutter*2/3; }
+
+    img {
+        width: ($grid*2 - 10px);
+        height: ($grid*2 - 15px);
+    }
 }
