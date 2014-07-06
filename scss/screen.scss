@@ -76,6 +76,10 @@ body {
             color: $color-black;
             border-bottom: 1px solid $color-black;
         }
+        &:focus {
+            outline-width: 0;
+            border-bottom: 2px solid $color-black;
+        }
     }
 
     &.intro {
@@ -101,8 +105,14 @@ body {
     height: $social-icon-size;
     margin: 0 $gutter 0 0;
     @include opacity(0.85);
-    &:hover { @include opacity(1) }
+
     &:last-child { margin: 0; }
+
+    &:hover { @include opacity(1) }
+    &:focus {
+        outline-width: 0;
+        border-bottom: 2px solid $color-black;
+    }
 
     &.email {
         background: url("../images/email-icon.png") center no-repeat;
@@ -160,6 +170,12 @@ body {
         @include opacity(0);
         @include transition(all 0.2s ease-in 0s);
         @include translate3d(0,0,0);
+        &:focus, &:hover {
+            outline-width: 0;
+            padding: $gutter $gutter/3;
+            @include opacity(1);
+            .title { @include translateY(-50%); }
+        }
 
         .title {
             width: 100%;
@@ -187,11 +203,4 @@ body {
         a { left: $gutter*2/3; }
     }
 
-    &:hover {
-        a {
-            padding: $gutter $gutter/3;
-            @include opacity(1);
-            .title { @include translateY(-50%); }
-        }
-    }
 }
