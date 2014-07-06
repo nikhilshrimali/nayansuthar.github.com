@@ -36,31 +36,27 @@ body {
   width: 100%;
   overflow: hidden;
 }
+/* line 56, ../scss/screen.scss */
+.row.margin-bottom {
+  margin-bottom: 180px;
+}
 
 /*-- Text --*/
-/* line 63, ../scss/screen.scss */
+/* line 64, ../scss/screen.scss */
 .text {
   width: 100%;
   color: #363b47;
   cursor: default;
 }
-/* line 67, ../scss/screen.scss */
+/* line 68, ../scss/screen.scss */
 .text.intro {
   height: 90px;
   margin-top: 180px;
   text-align: center;
 }
-/* line 72, ../scss/screen.scss */
-.text.footer {
-  margin-top: 90px;
-  margin-bottom: 90px;
-  font-size: 12px;
-  text-align: center;
-  color: rgba(54, 59, 71, 0.6);
-}
 
 /*-- Social Links --*/
-/* line 86, ../scss/screen.scss */
+/* line 80, ../scss/screen.scss */
 .social-icons-wrapper {
   width: 100%;
   height: 24px;
@@ -68,7 +64,7 @@ body {
   text-align: center;
 }
 
-/* line 92, ../scss/screen.scss */
+/* line 86, ../scss/screen.scss */
 .social-icon {
   display: inline-block;
   width: 24px;
@@ -77,19 +73,19 @@ body {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=95);
   opacity: 0.95;
 }
-/* line 98, ../scss/screen.scss */
+/* line 92, ../scss/screen.scss */
 .social-icon:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-/* line 100, ../scss/screen.scss */
+/* line 94, ../scss/screen.scss */
 .social-icon.twitter {
   background: url("../images/twitter-icon.png") center no-repeat;
   background-size: contain;
 }
 
 /*-- Separator Line --*/
-/* line 111, ../scss/screen.scss */
+/* line 105, ../scss/screen.scss */
 .separator-line {
   width: 180px;
   height: 1px;
@@ -99,28 +95,24 @@ body {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
   opacity: 0.2;
 }
-/* line 118, ../scss/screen.scss */
-.separator-line.top-margin {
-  margin-top: 180px;
-}
 
 /*-- Work Card --*/
-/* line 125, ../scss/screen.scss */
+/* line 118, ../scss/screen.scss */
 .work-card {
   width: 180px;
   height: 180px;
   float: left;
   padding: 0 5px 15px;
 }
-/* line 130, ../scss/screen.scss */
+/* line 123, ../scss/screen.scss */
 .work-card:first-child {
   padding: 0 10px 15px 0;
 }
-/* line 131, ../scss/screen.scss */
+/* line 124, ../scss/screen.scss */
 .work-card:last-child {
   padding: 0 0 15px 10px;
 }
-/* line 133, ../scss/screen.scss */
+/* line 126, ../scss/screen.scss */
 .work-card img {
   width: 170px;
   height: 165px;

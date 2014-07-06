@@ -53,6 +53,7 @@ body {
 .row {
     width: 100%;
     overflow: hidden;
+    &.margin-bottom { margin-bottom: $grid*2; }
 }
 
 
@@ -68,13 +69,6 @@ body {
         height: $grid;
         margin-top: $grid*2;
         text-align: center;
-    }
-    &.footer {
-        margin-top: $grid;
-        margin-bottom: $grid;
-        font-size: $footer-font-size;
-        text-align: center;
-        color: rgba($color-black, 0.6);
     }
 }
 
@@ -115,7 +109,6 @@ body {
     margin: 0 auto;
     margin-bottom: ($grid*2 - 1px);
     @include opacity(0.2);
-    &.top-margin { margin-top: $grid*2; }
 }
 
 
