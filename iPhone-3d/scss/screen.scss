@@ -1,0 +1,640 @@
+@import "compass";
+@import "compass/css3/user-interface";
+@import "mixins";
+$x: ""; //for temp use
+
+
+//-----BASIC-RESET
+* {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    @include box-sizing(border-box);
+    font-family: calibri, arial;
+    @include user-select(none);
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #eee;
+}
+body {
+    padding: 0 0 100px;
+    background-color: #e6e6e6;
+}
+
+
+
+//-----LAYOUT
+.info-wrapper {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 14px;
+    color: rgba(#000, 0.12);
+    line-height: 1.6em;
+}
+.object-wrapper {
+    width: 100%;
+    height: 100%;
+    @include perspective(1000);
+    @include perspective(1000px);
+    @include transform-origin(50%);
+}
+
+
+
+//-----OBJECT
+.iphone {
+    width: 250px;
+    height: 530px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -265px -125px;
+    @include transform-style(preserve-3d);
+    @include rotateY(60deg);
+    @include animation (rotate3d, 36s);
+
+    //-----Object-Layers
+    .layer {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include border-radius(32px);
+        background: linear-gradient(rgba(#3f4752, 0.98) 0%, rgba(#030708, 0.98) 1%,
+                                    rgba(#6f7b87, 0.98) 3%,
+                                    rgba(#313842, 0.98) 10%, rgba(#535d69, 0.98) 20%,
+                                    rgba(#38414a, 0.98) 50%, rgba(#262a33, 0.98) 90%,
+                                    rgba(#6f7b87, 0.98) 97%, rgba(#030708, 0.98) 99%,
+                                    rgba(#030708, 0.98) 99%, rgba(#3f4752, 0.98) 100%),
+        url("../images/noise-lines.png");
+    }
+    @for $i from 1 through 30 {
+        .layer-#{$i}{
+            @include translateZ($i - 15px);
+            background-position: #{$i}px 0;
+        }
+    }
+    @for $i from 1 through 4 {
+        $x: (31 - $i - 1);
+        .layer-#{$i}, .layer-#{$x} {
+            width: 250px - 4 + $i;
+            height: 530px - 4 + $i;
+            top: 2px - $i/2;
+            left: 2px - $i/2;
+            background: linear-gradient(#030708 0%, #adb6c5 1%,
+                                        #050a0e 4%, #050a0e 96%,
+                                        #adb6c5 99%, #030708 100%);
+        }
+    }
+    .layer-1, .layer-30 { background: #000002 }
+    .layer-30 {
+        width: 250px - 5;
+        height: 530px - 5;
+        top: 2.5px;
+        left: 2.5px;
+        Border: 2px solid #000;
+        @include box-shadow(0 0 1px 1px #3b3f43 inset);
+    }
+    .layer-29 {
+        border: 1px solid #545b63;
+        border-top: 1px solid #6a6f75;
+    }
+
+
+    //-----Object-Front-Elements
+    .screen {
+        width: 220px;
+        height: 380px;
+        background-image: url("../images/screen.jpg");
+        background-size: 100% 100%;
+        position: absolute;
+        top: 68px;
+        left: 50%;
+        margin: 0 -110px;
+    }
+    /* .glare { */
+    /*     width: 100%; */
+    /*     height: 100%; */
+    /*     position: absolute; */
+    /*     top: 0; */
+    /*     left: 0; */
+    /*     @include border-radius(32px); */
+    /*     overflow: hidden; */
+    /*     &:after { */
+    /*         content: ""; */
+    /*         width: 100%; */
+    /*         height: 100%; */
+    /*         position: absolute; */
+    /*         top: -120px; */
+    /*         left: 140px; */
+    /*         background: linear-gradient(#fff 0%, rgba(#fff, 0) 100%); */
+    /*         @include opacity(0.28); */
+    /*         @include rotate(-18deg); */
+    /*         @include animation (glareSlide, 18s); */
+    /*     } */
+    /*     &.back { */
+    /*         @include my-transform(rotateY(180deg)); */
+    /*         &:after { */
+    /*             @include animation (glareSlide2, 18s); */
+    /*         } */
+    /*     } */
+    /* } */
+
+    .button {
+        width: 46px;
+        height: 46px;
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        margin: 0 -23px;
+        @include border-radius(50%);
+        background: linear-gradient(#000002 0%, #000002 50%, #282c31 50%, #686d74 100%);
+        @include box-shadow(0 -1px 0 0 rgba(#fff, 0.4));
+        &:after {
+            content: "";
+            width: 12px;
+            height: 12px;
+            @include border-radius(3px);
+            border: 2px solid rgba(#fff, 0.6);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -8px;
+        }
+    }
+    .front-cam {
+        width: 12px;
+        height: 12px;
+        @include border-radius(10px);
+        background: linear-gradient(#12121d 0%, #12121d 30%, #24292f 100%);
+        border-bottom: 1px solid rgba(#fff, 0.16);
+        position: absolute;
+        top: 18px;
+        left: 50%;
+        margin: 0 -6px;
+        @include box-shadow (0 0 0 1px rgba(#fff, 0.1), 0 0 1px 0 rgba(#000, 0.3) inset);
+        @include rotate(-20deg);
+        &:before, &:after {
+            content: "";
+            width: 4px;
+            height: 4px;
+            @include border-radius(2px);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -2px;
+            background: #253c82;
+            @include box-shadow (0 0 2px 2px rgba(#000, 0.3), 0 0 1px 1px rgba(#253c82, 0.4));
+        }
+        &:after {
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            background: rgba(white, 0.2);
+            @include box-shadow (1px 1px 1px 1px rgba(#000, 0.4));
+        }
+    }
+    .speaker {
+        width: 60px;
+        height: 10px;
+        @include border-radius(5px);
+        background: linear-gradient(#12121d 0%, #1c2025 100%);
+        border-bottom: 1px solid rgba(#fff, 0.15);
+        position: absolute;
+        top: 40px;
+        left: 50%;
+        margin: 0 -30px;
+        @include box-shadow (0 0 0 1px rgba(#fff, 0.1), 0 0 1px 0 rgba(#000, 0.3) inset);
+        &:after {
+            content: "";
+            width: 54px;
+            height: 4px;
+            @include border-radius(2px);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -2px -27px;
+            background: url("../images/speaker-texture.png") repeat;
+            @include opacity(0.6);
+            @include box-shadow (0 0 1px 1px rgba(#000, 0.1) inset, 0 0 0 1px rgba(#000, 0.5));
+        }
+    }
+
+
+    //-----Object-Back-Elements
+    .back-cam {
+        width: 26px;
+        height: 26px;
+        @include border-radius(15px);
+        background: linear-gradient(#252e37 25%, #595f67 50%, #252e37 75%);
+        position: absolute;
+        top: 16px;
+        right: 24px;
+        @include rotate(120deg);
+        &:before, &:after {
+            content: "";
+            width: 14px;
+            height: 14px;
+            @include border-radius(50%);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -7px;
+            background: #313c43;
+            @include box-shadow (0 0 0 1px #141517);
+        }
+        &:before {
+            width: 20px;
+            height: 20px;
+            margin: -10px;
+            background: linear-gradient(#0d0908 0%, #2c3031 100%);
+            @include rotate(-90deg);
+            @include box-shadow (-1px 0 0 0 rgba(white, 0.15), 1px 0 0 0 rgba(white, 0.1));
+        }
+    }
+    .back-cam-inner {
+        width: 8px;
+        height: 8px;
+        @include border-radius(10px);
+        background: #194969;
+        position: absolute;
+        top: 9px;
+        left: 9px;
+        z-index: 999;
+        @include box-shadow (1px 0 0 0 rgba(#fff, 0.1), -1px 0 0 0 rgba(#000, 0.3));
+        @include rotate(-20deg);
+        &:before {
+            content: "";
+            width: 0;
+            height: 0;
+            @include border-radius(50%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: 4px solid transparent;
+            border-left-color: #29658b;
+            border-right-color: #2d6a92;
+        }
+        &:after {
+            content: "";
+            width: 1px;
+            height: 1px;
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            background: rgba(white, 0.2);
+            @include box-shadow (1px 1px 1px 1px rgba(#000, 0.4));
+        }
+    }
+
+    .back-flash {
+        width: 16px;
+        height: 16px;
+        @include border-radius(15px);
+        background: linear-gradient(#41494a 0%, #687173 50%, #687173 60%, #41494a 100%);
+        @include rotate(-35deg);
+        position: absolute;
+        top: 21px;
+        right: 60px;
+        &:before {
+            content: "";
+            width: 0;
+            height: 0;
+            @include border-radius(50%);
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            border: 6px solid #cac9b5;
+            border-left-color: #adaa9b;
+            border-right-color: #adaa9b;
+            @include box-shadow(0 0 1px 1px rgba(#000, 0.8));
+            @include rotate(35deg);
+        }
+        &:after {
+            content: "";
+            width: 6px;
+            height: 3px;
+            @include border-radius(50%);
+            @include rotate(35deg);
+            position: absolute;
+            top: 6px;
+            left: 5px;
+            background: rgba(#b1afa2, 0.6);
+            @include box-shadow(0 0 2px 1px #b1afa2,
+                                0 2px 1px 0 rgba(#fff, 0.7),
+                                0 -2px 1px 0 rgba(#fff, 0.7));
+        }
+    }
+    .back-screw {
+        width: 4px;
+        height: 3px;
+        @include border-radius(50%);
+        background: #202020;
+        position: absolute;
+        top: 28px;
+        right: 53px;
+        @include box-shadow(0 0 1px 0 rgba(#000, 0.6) inset);
+    }
+    .back-cover {
+        width: 100%;
+        height: 426px;
+        position: absolute;
+        left: 0;
+        top: #{(530 - 430)/2}px;
+        background: linear-gradient(rgba(#2e373e, 0.985) 0%, rgba(#232c35, 0.985) 100%),
+        url("../images/noise.png");
+    }
+    .iphone-label {
+        width: 100%;
+        position: absolute;
+        top: 350px;
+        left: 0;
+        color: #5b646d;
+        font-size: 24px;
+        font-weight: 400;
+        text-align: center;
+        letter-spacing: -1px;
+        @include rotateY(180deg);
+    }
+    .iphone-text {
+        width: 100%;
+        position: absolute;
+        top: 386px;
+        left: 0;
+        color: #171e26;
+        font-size: 6px;
+        text-align: center;
+        @include rotateY(180deg);
+    }
+
+    .power-button-1, .power-button-2, .power-button-3, .power-button-4 {
+        width: 40px;
+        height: 8px;
+        background: darken(#3f4752, 2%);
+        border: 1px solid lighten(#3f4752, 4%);
+        @include border-radius(5px);
+        position: absolute;
+        top: -5px;
+        right: 40px;
+        @include my-transform(rotateX(90deg));
+    }
+    .power-button-1 {
+        @include box-shadow(0 0 1px 0 draken(#232d39, 8%));
+        border-bottom: 1px solid darken(#99a3af, 16%);
+        border-top: 1px solid darken(#99a3af, 16%);
+    }
+    .power-button-2 { top: -5.5px }
+    .power-button-3 { top: -6px }
+    .power-button-4 {
+        width: 38px;
+        height: 6px;
+        top: -6.5px;
+        right: 41px;
+        background: darken(#3f4752, 2%);
+        border: 1px solid #434d57;
+    }
+
+
+    .mute-button-1, .mute-button-2, .mute-button-3, .mute-button-4 {
+        background: #434d57;
+        border: 1px solid lighten(#434d57, 1.8%);
+        @include border-radius(2px);
+        position: absolute;
+        top: 100px;
+        left: -6px;
+        @include my-transform(rotateY(90deg) translateX(-2px));
+    }
+    .mute-button-1 {
+        width: 10px;
+        height: 22px;
+        top: 99px;
+        background: #313841;
+        @include box-shadow(0 0 1px 0 rgba(#111924, 0.5) inset);
+        border: none;
+        border-left: 1px solid rgba(#111924, 0.7);
+        @include my-transform(rotateY(90deg));
+    }
+    .mute-button-2 {
+        width: 4px;
+        height: 20px;
+        left: -3px;
+        border-left: 1px solid #99a3af;
+        border-top: 1px solid #99a3af;
+        @include box-shadow(1px 0 0 0 rgba(#111924, 0.5));
+    }
+    .mute-button-3 {
+        width: 4px;
+        height: 20px;
+        left: -3.5px;
+    }
+    .mute-button-4 {
+        width: 2px;
+        height: 18px;
+        left: -3.5px;
+        top: 101px;
+        background: #3f4752;
+        border: 1px solid #434d57;
+    }
+    .volume-up-1, .volume-up-2, .volume-up-3, .volume-up-4,
+    .volume-down-1, .volume-down-2, .volume-down-3, .volume-down-4 {
+        width: 14px;
+        height: 14px;
+        background: #434d57;
+        border: 1px solid lighten(#434d57, 1.8%);
+        @include border-radius(7px);
+        position: absolute;
+        top: 150px;
+        left: -7px;
+        @include my-transform(rotateY(90deg));
+    }
+    .volume-up-1, .volume-down-1 {
+        @include box-shadow(0 0 0 1px #111924);
+        border-bottom: 1px solid #99a3af;
+        border-top: 1px solid #99a3af;
+    }
+    .volume-up-2, .volume-down-2 { left: -7.5px }
+    .volume-up-3, .volume-down-3 { left: -8px }
+    .volume-up-4, .volume-down-4 {
+        width: 12px;
+        height: 12px;
+        left: -8.5px;
+        top: 151px;
+        background: #3f4752;
+        border: 1px solid #434d57;
+        &:after {
+            content: "+";
+            color: #646d78;
+            font-size: 16px;
+            position: absolute;
+            top: -5px;
+            left: 1px;
+            @include text-shadow(0 0 1px rgba(#000, 0.3));
+        }
+    }
+    .volume-down-1, .volume-down-2, .volume-down-3, .volume-down-4 {
+        top: 190px;
+    }
+    .volume-down-4 {
+        top: 191px;
+        &:after {
+            content: "_";
+            top: -12px
+        }
+    }
+
+
+    .side-line-1, .side-line-2, .side-line-3, .side-line-4 {
+        width: 21px;
+        height: 2px;
+        background: #000;
+        position: absolute;
+        top: 52px;
+        left: -10px;
+        @include my-transform(rotateY(90deg));
+    }
+    .side-line-3, .side-line-4 { left: auto; right: -10px }
+    .side-line-2, .side-line-4 { top: auto; bottom: 52px }
+
+
+
+    /*-----INNER-PLANES-----*/
+    .inner-plane-1, .inner-plane-2 {
+        width: 24px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 12px;
+        @include border-radius(5px);
+        @include opacity(0.4);
+        @include my-transform (rotateY(90deg));
+        background: linear-gradient(#030708 0%, #6f7b87 2%,
+                                    #313842 10%, #535d69 20%,
+                                    #38414a 50%, #262a33 90%,
+                                    #6f7b87 98%, #030708 100%);
+    }
+    .inner-plane-2 {
+        left: auto;
+        right: 12px;
+    }
+
+
+    .audio-op {
+        width: 14px;
+        height: 14px;
+        background: #111;
+        @include box-shadow (1px 0 0 #1b252f, -1px 0 0 lighten(#4e525e, 28%),
+                             0 0 0 1px #4e525e, 0 0 0 2px #1b252f,
+                             0 0 0 1px #4e525e inset);
+        @include border-radius(10px);
+        position: absolute;
+        bottom: -6px;
+        left: 38px;
+        @include my-transform(rotateX(90deg) rotateZ(-30deg));
+    }
+
+    .charger-socket {
+        width: 34px;
+        height: 7px;
+        background: #111;
+        @include box-shadow (1px 0 0 #1b252f, -1px 0 0 lighten(#4e525e, 18%),
+                             0 1px 0 lighten(#4e525e, 18%), 0 -1px 0 lighten(#4e525e, 18%),
+                             0 0 0 1px #4e525e, 0 0 0 2px #1b252f,
+                             0 0 0 1px #4e525e inset);
+        @include border-radius(10px);
+        position: absolute;
+        bottom: -3px;
+        left: 108px;
+        @include my-transform(rotateX(90deg) translateY(0.5px));
+    }
+
+    .bottom-speaker {
+        width: 4px;
+        height: 4px;
+        background: #111;
+        @include box-shadow (0 -1px 0 lighten(#4e525e, 10%));
+        @include border-radius(10px);
+        position: absolute;
+        bottom: -3px;
+    }
+    .bs-1 { left: 60px; @include my-transform(rotateX(90deg) translateY(5px)) }
+    .bs-2 { left: 67px; @include my-transform(rotateX(90deg) translateY(5px)) }
+    .bs-3 { left: 74px; @include my-transform(rotateX(90deg) translateY(5px)) }
+    .bs-4 { left: 81px; @include my-transform(rotateX(90deg) translateY(5px)) }
+    .bs-5 { left: 88px; @include my-transform(rotateX(90deg) translateY(5px)) }
+    .bs-6 { left: 60px; @include my-transform(rotateX(90deg) translateY(-2px)) }
+    .bs-7 { left: 67px; @include my-transform(rotateX(90deg) translateY(-2px)) }
+    .bs-8 { left: 74px; @include my-transform(rotateX(90deg) translateY(-2px)) }
+    .bs-9 { left: 81px; @include my-transform(rotateX(90deg) translateY(-2px)) }
+    .bs-10 { left: 88px; @include my-transform(rotateX(90deg) translateY(-2px)) }
+
+    .bs-11 { left: 159px; @include my-transform(rotateX(90deg) translateY(5px)) }
+    .bs-12 { left: 166px; @include my-transform(rotateX(90deg) translateY(5px)) }
+    .bs-13 { left: 173px; @include my-transform(rotateX(90deg) translateY(5px)) }
+    .bs-14 { left: 180px; @include my-transform(rotateX(90deg) translateY(5px)) }
+    .bs-15 { left: 187px; @include my-transform(rotateX(90deg) translateY(5px)) }
+    .bs-16 { left: 194px; @include my-transform(rotateX(90deg) translateY(5px)) }
+    .bs-17 { left: 201px; @include my-transform(rotateX(90deg) translateY(5px)) }
+    .bs-18 { left: 208px; @include my-transform(rotateX(90deg) translateY(5px)) }
+    .bs-19 { left: 159px; @include my-transform(rotateX(90deg) translateY(-2px)) }
+    .bs-20 { left: 166px; @include my-transform(rotateX(90deg) translateY(-2px)) }
+    .bs-21 { left: 173px; @include my-transform(rotateX(90deg) translateY(-2px)) }
+    .bs-22 { left: 180px; @include my-transform(rotateX(90deg) translateY(-2px)) }
+    .bs-23 { left: 187px; @include my-transform(rotateX(90deg) translateY(-2px)) }
+    .bs-24 { left: 194px; @include my-transform(rotateX(90deg) translateY(-2px)) }
+    .bs-25 { left: 201px; @include my-transform(rotateX(90deg) translateY(-2px)) }
+    .bs-26 { left: 208px; @include my-transform(rotateX(90deg) translateY(-2px)) }
+
+    .bottom-screw-1, .bottom-screw-2 {
+        width: 5px;
+        height: 5px;
+        background: #111;
+        border: 2px solid lighten(#4e525e, 6%);
+        border-top: 2px solid lighten(#4e525e, 18%);
+        border-bottom: 2px solid lighten(#4e525e, 18%);
+        /* @include box-shadow (0 -1px 0 lighten(#4e525e, 10%)); */
+        @include border-radius(10px);
+        position: absolute;
+        bottom: -3px;
+        left: 97px;
+        @include my-transform(rotateX(90deg) translateY(0.5px));
+    }
+    .bottom-screw-2 { left: auto; right: 97px }
+
+
+    .logo {
+        position: absolute;
+        top: 110px;
+        left: 50%;
+        margin: 0 -25px;
+        @include my-transform(rotateY(180deg));
+    }
+}
+
+
+/*-----ANIMATIONS-----*/
+@include keyframes(rotate3d) {
+    0% { @include my-transform(rotateY(0deg) rotateX(60deg))}
+    50% { @include my-transform(rotateY(360deg) rotateX(-60deg))}
+    100% { @include my-transform(rotateY(720deg) rotateX(60deg))}
+}
+
+/* @include keyframes(glareSlide) { */
+/*     0% { left: 200px } */
+/*     50% { left: 100px } */
+/*     100% { left: 200px } */
+/* } */
+
+/* @include keyframes(glareSlide2) { */
+/*     0% { left: 100px } */
+/*     50% { left: 200px } */
+/*     100% { left: 100px } */
+/* } */
