@@ -100,12 +100,20 @@ body {
     width: $social-icon-size;
     height: $social-icon-size;
     margin: 0 $gutter 0 0;
-    @include opacity(0.95);
+    @include opacity(0.85);
     &:hover { @include opacity(1) }
     &:last-child { margin: 0; }
 
+    &.email {
+        background: url("../images/email-icon.png") center no-repeat;
+        background-size: contain;
+    }
     &.twitter {
         background: url("../images/twitter-icon.png") center no-repeat;
+        background-size: contain;
+    }
+    &.github {
+        background: url("../images/github-icon.png") center no-repeat;
         background-size: contain;
     }
 }
@@ -166,7 +174,7 @@ body {
         .desc {
             font-size: 12px;
             font-weight: normal;
-            @include opacity(0.8);
+            @include opacity(0.85);
         }
     }
 

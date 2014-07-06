@@ -82,8 +82,8 @@ body {
   width: 27px;
   height: 27px;
   margin: 0 15px 0 0;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=95);
-  opacity: 0.95;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=85);
+  opacity: 0.85;
 }
 /* line 104, ../scss/screen.scss */
 .social-icon:hover {
@@ -95,13 +95,23 @@ body {
   margin: 0;
 }
 /* line 107, ../scss/screen.scss */
+.social-icon.email {
+  background: url("../images/email-icon.png") center no-repeat;
+  background-size: contain;
+}
+/* line 111, ../scss/screen.scss */
 .social-icon.twitter {
   background: url("../images/twitter-icon.png") center no-repeat;
   background-size: contain;
 }
+/* line 115, ../scss/screen.scss */
+.social-icon.github {
+  background: url("../images/github-icon.png") center no-repeat;
+  background-size: contain;
+}
 
 /*-- Separator Line --*/
-/* line 118, ../scss/screen.scss */
+/* line 126, ../scss/screen.scss */
 .separator-line {
   width: 210px;
   height: 1px;
@@ -113,20 +123,20 @@ body {
 }
 
 /*-- Work Card --*/
-/* line 131, ../scss/screen.scss */
+/* line 139, ../scss/screen.scss */
 .work-card {
   width: 210px;
   height: 210px;
   float: left;
   padding: 0 5px 15px;
 }
-/* line 137, ../scss/screen.scss */
+/* line 145, ../scss/screen.scss */
 .work-card img, .work-card a {
   display: block;
   width: 200px;
   height: 195px;
 }
-/* line 143, ../scss/screen.scss */
+/* line 151, ../scss/screen.scss */
 .work-card a {
   position: absolute;
   top: 0;
@@ -149,7 +159,7 @@ body {
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-/* line 156, ../scss/screen.scss */
+/* line 164, ../scss/screen.scss */
 .work-card a .title {
   width: 100%;
   position: absolute;
@@ -168,36 +178,36 @@ body {
   -o-transition: all 0.2s ease-in 0s;
   transition: all 0.2s ease-in 0s;
 }
-/* line 166, ../scss/screen.scss */
+/* line 174, ../scss/screen.scss */
 .work-card a .desc {
   font-size: 12px;
   font-weight: normal;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-  opacity: 0.8;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=85);
+  opacity: 0.85;
 }
-/* line 173, ../scss/screen.scss */
+/* line 181, ../scss/screen.scss */
 .work-card:first-child {
   padding: 0 10px 15px 0;
 }
-/* line 175, ../scss/screen.scss */
+/* line 183, ../scss/screen.scss */
 .work-card:first-child a {
   left: 0;
 }
-/* line 177, ../scss/screen.scss */
+/* line 185, ../scss/screen.scss */
 .work-card:last-child {
   padding: 0 0 15px 10px;
 }
-/* line 179, ../scss/screen.scss */
+/* line 187, ../scss/screen.scss */
 .work-card:last-child a {
   left: 10px;
 }
-/* line 183, ../scss/screen.scss */
+/* line 191, ../scss/screen.scss */
 .work-card:hover a {
   padding: 15px 5px;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-/* line 186, ../scss/screen.scss */
+/* line 194, ../scss/screen.scss */
 .work-card:hover a .title {
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
