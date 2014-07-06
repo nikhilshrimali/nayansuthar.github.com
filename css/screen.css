@@ -147,6 +147,11 @@ body {
   height: 195px;
 }
 /* line 161, ../scss/screen.scss */
+.work-card img {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=88);
+  opacity: 0.88;
+}
+/* line 165, ../scss/screen.scss */
 .work-card a {
   position: absolute;
   top: 0;
@@ -169,14 +174,14 @@ body {
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-/* line 173, ../scss/screen.scss */
+/* line 177, ../scss/screen.scss */
 .work-card a:focus, .work-card a:hover {
   outline-width: 0;
   padding: 15px 5px;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-/* line 177, ../scss/screen.scss */
+/* line 181, ../scss/screen.scss */
 .work-card a:focus .title, .work-card a:hover .title {
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -184,7 +189,7 @@ body {
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-/* line 180, ../scss/screen.scss */
+/* line 184, ../scss/screen.scss */
 .work-card a .title {
   width: 100%;
   position: absolute;
@@ -203,26 +208,26 @@ body {
   -o-transition: all 0.2s ease-in 0s;
   transition: all 0.2s ease-in 0s;
 }
-/* line 190, ../scss/screen.scss */
+/* line 194, ../scss/screen.scss */
 .work-card a .desc {
   font-size: 12px;
   font-weight: normal;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=85);
   opacity: 0.85;
 }
-/* line 197, ../scss/screen.scss */
+/* line 201, ../scss/screen.scss */
 .work-card:first-child {
   padding: 0 10px 15px 0;
 }
-/* line 199, ../scss/screen.scss */
+/* line 203, ../scss/screen.scss */
 .work-card:first-child a {
   left: 0;
 }
-/* line 201, ../scss/screen.scss */
+/* line 205, ../scss/screen.scss */
 .work-card:last-child {
   padding: 0 0 15px 10px;
 }
-/* line 203, ../scss/screen.scss */
+/* line 207, ../scss/screen.scss */
 .work-card:last-child a {
   left: 10px;
 }

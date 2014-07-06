@@ -158,6 +158,10 @@ body {
         height: ($grid*2 - $gutter);
     }
 
+    img {
+        @include opacity(0.88);
+    }
+
     a {
         position: absolute;
         top: 0;
