@@ -9,14 +9,16 @@ $color-bg         : #f9fafb;
 $color-black      : #363b47;
 $color-red        : #e15842;
 
-$grid             : 90px;
+$base-line        : 5px;
+$grid             : 105px;
 $gutter           : 15px;
-$page-max-width   : 540px;
+$page-max-width   : 630px;
 
-$body-font-size   : 15px;
-$footer-font-size : 12px;
+$body-font-size   : 17px;
+$body-line-height : $base-line*5;
 
-$social-icon-size : 24px;
+$social-icon-size : 27px;
+
 
 
 
@@ -27,9 +29,7 @@ $social-icon-size : 24px;
     margin: 0;
     position: relative;
     @include box-sizing(border-box);
-    font-family: tahoma, calibri, arial;
-    font-size: $body-font-size;
-    letter-spacing: 0.05em;
+    font-family: "Noticia Text", calibri, arial;
 }
 html {
     width: 100%;
@@ -63,15 +63,27 @@ body {
 /*-- Text --*/
 .text {
     width: 100%;
+    font-size: $body-font-size;
+    line-height: $body-line-height;
     color: $color-black;
     cursor: default;
+    a {
+        display: inline-block;
+        text-decoration: none;
+        color: lighten($color-black, 15%);
+        border-bottom: 1px solid rgba($color-black, 0.06);
+        &:hover {
+            color: $color-black;
+            border-bottom: 1px solid $color-black;
+        }
+    }
+
     &.intro {
-        height: $grid;
+        height: $grid*2;
         margin-top: $grid*2;
         text-align: center;
     }
 }
-
 
 
 
@@ -90,6 +102,7 @@ body {
     margin: 0 $gutter 0 0;
     @include opacity(0.95);
     &:hover { @include opacity(1) }
+    &:last-child { margin: 0; }
 
     &.twitter {
         background: url("../images/twitter-icon.png") center no-repeat;
@@ -107,7 +120,7 @@ body {
     height: 1px;
     background: -webkit-linear-gradient(left,$color-bg,$color-black,$color-bg);
     margin: 0 auto;
-    margin-bottom: ($grid*2 - 1px);
+    margin-bottom: ($grid - 1px);
     @include opacity(0.2);
 }
 
@@ -120,11 +133,57 @@ body {
     height: $grid*2;
     float: left;
     padding: 0 $gutter/3 $gutter;
-    &:first-child { padding: 0 $gutter*2/3 $gutter 0; }
-    &:last-child { padding: 0 0 $gutter $gutter*2/3; }
 
-    img {
-        width: ($grid*2 - 10px);
-        height: ($grid*2 - 15px);
+    img, a {
+        display: block;
+        width: ($grid*2 - $gutter*2/3);
+        height: ($grid*2 - $gutter);
+    }
+
+    a {
+        position: absolute;
+        top: 0;
+        left: $gutter/3;
+        padding: $gutter*3/2 $gutter/3;
+        color: $color-black;
+        text-decoration: none;
+        text-align: center;
+        background: rgba($color-bg, 0.8);
+        @include opacity(0);
+        @include transition(all 0.2s ease-in 0s);
+        @include translate3d(0,0,0);
+
+        .title {
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            font-size: 18px;
+            margin: 0 0 $gutter;
+            @include translateY(-20%);
+            @include transition(all 0.2s ease-in 0s);
+        }
+        .desc {
+            font-size: 12px;
+            font-weight: normal;
+            @include opacity(0.8);
+        }
+    }
+
+    &:first-child {
+        padding: 0 $gutter*2/3 $gutter 0;
+        a { left: 0; }
+    }
+    &:last-child {
+        padding: 0 0 $gutter $gutter*2/3;
+        a { left: $gutter*2/3; }
+    }
+
+    &:hover {
+        a {
+            padding: $gutter $gutter/3;
+            @include opacity(1);
+            .title { @include translateY(-50%); }
+        }
     }
 }

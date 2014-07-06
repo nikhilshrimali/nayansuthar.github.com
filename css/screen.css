@@ -1,6 +1,6 @@
 /*-- Variables --*/
 /*-- Common Styles --*/
-/* line 25, ../scss/screen.scss */
+/* line 27, ../scss/screen.scss */
 * {
   padding: 0;
   margin: 0;
@@ -8,9 +8,7 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: tahoma, calibri, arial;
-  font-size: 15px;
-  letter-spacing: 0.05em;
+  font-family: "Noticia Text", calibri, arial;
 }
 
 /* line 34, ../scss/screen.scss */
@@ -25,7 +23,7 @@ html {
 
 /* line 42, ../scss/screen.scss */
 body {
-  max-width: 540px;
+  max-width: 630px;
   height: auto;
   margin: 0 auto;
 }
@@ -38,82 +36,172 @@ body {
 }
 /* line 56, ../scss/screen.scss */
 .row.margin-bottom {
-  margin-bottom: 180px;
+  margin-bottom: 210px;
 }
 
 /*-- Text --*/
 /* line 64, ../scss/screen.scss */
 .text {
   width: 100%;
+  font-size: 17px;
+  line-height: 25px;
   color: #363b47;
   cursor: default;
 }
-/* line 68, ../scss/screen.scss */
+/* line 70, ../scss/screen.scss */
+.text a {
+  display: inline-block;
+  text-decoration: none;
+  color: #575f72;
+  border-bottom: 1px solid rgba(54, 59, 71, 0.06);
+}
+/* line 75, ../scss/screen.scss */
+.text a:hover {
+  color: #363b47;
+  border-bottom: 1px solid #363b47;
+}
+/* line 81, ../scss/screen.scss */
 .text.intro {
-  height: 90px;
-  margin-top: 180px;
+  height: 210px;
+  margin-top: 210px;
   text-align: center;
 }
 
 /*-- Social Links --*/
-/* line 80, ../scss/screen.scss */
+/* line 92, ../scss/screen.scss */
 .social-icons-wrapper {
   width: 100%;
-  height: 24px;
-  margin: 0 0 156px;
+  height: 27px;
+  margin: 0 0 183px;
   text-align: center;
 }
 
-/* line 86, ../scss/screen.scss */
+/* line 98, ../scss/screen.scss */
 .social-icon {
   display: inline-block;
-  width: 24px;
-  height: 24px;
+  width: 27px;
+  height: 27px;
   margin: 0 15px 0 0;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=95);
   opacity: 0.95;
 }
-/* line 92, ../scss/screen.scss */
+/* line 104, ../scss/screen.scss */
 .social-icon:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-/* line 94, ../scss/screen.scss */
+/* line 105, ../scss/screen.scss */
+.social-icon:last-child {
+  margin: 0;
+}
+/* line 107, ../scss/screen.scss */
 .social-icon.twitter {
   background: url("../images/twitter-icon.png") center no-repeat;
   background-size: contain;
 }
 
 /*-- Separator Line --*/
-/* line 105, ../scss/screen.scss */
+/* line 118, ../scss/screen.scss */
 .separator-line {
-  width: 180px;
+  width: 210px;
   height: 1px;
   background: -webkit-linear-gradient(left, #f9fafb, #363b47, #f9fafb);
   margin: 0 auto;
-  margin-bottom: 179px;
+  margin-bottom: 104px;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
   opacity: 0.2;
 }
 
 /*-- Work Card --*/
-/* line 118, ../scss/screen.scss */
+/* line 131, ../scss/screen.scss */
 .work-card {
-  width: 180px;
-  height: 180px;
+  width: 210px;
+  height: 210px;
   float: left;
   padding: 0 5px 15px;
 }
-/* line 123, ../scss/screen.scss */
+/* line 137, ../scss/screen.scss */
+.work-card img, .work-card a {
+  display: block;
+  width: 200px;
+  height: 195px;
+}
+/* line 143, ../scss/screen.scss */
+.work-card a {
+  position: absolute;
+  top: 0;
+  left: 5px;
+  padding: 22.5px 5px;
+  color: #363b47;
+  text-decoration: none;
+  text-align: center;
+  background: rgba(249, 250, 251, 0.8);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in;
+  -webkit-transition-delay: 0s;
+  -moz-transition: all 0.2s ease-in 0s;
+  -o-transition: all 0.2s ease-in 0s;
+  transition: all 0.2s ease-in 0s;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+/* line 156, ../scss/screen.scss */
+.work-card a .title {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  font-size: 18px;
+  margin: 0 0 15px;
+  -webkit-transform: translateY(-20%);
+  -moz-transform: translateY(-20%);
+  -ms-transform: translateY(-20%);
+  -o-transform: translateY(-20%);
+  transform: translateY(-20%);
+  -webkit-transition: all 0.2s ease-in;
+  -webkit-transition-delay: 0s;
+  -moz-transition: all 0.2s ease-in 0s;
+  -o-transition: all 0.2s ease-in 0s;
+  transition: all 0.2s ease-in 0s;
+}
+/* line 166, ../scss/screen.scss */
+.work-card a .desc {
+  font-size: 12px;
+  font-weight: normal;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+}
+/* line 173, ../scss/screen.scss */
 .work-card:first-child {
   padding: 0 10px 15px 0;
 }
-/* line 124, ../scss/screen.scss */
+/* line 175, ../scss/screen.scss */
+.work-card:first-child a {
+  left: 0;
+}
+/* line 177, ../scss/screen.scss */
 .work-card:last-child {
   padding: 0 0 15px 10px;
 }
-/* line 126, ../scss/screen.scss */
-.work-card img {
-  width: 170px;
-  height: 165px;
+/* line 179, ../scss/screen.scss */
+.work-card:last-child a {
+  left: 10px;
+}
+/* line 183, ../scss/screen.scss */
+.work-card:hover a {
+  padding: 15px 5px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+/* line 186, ../scss/screen.scss */
+.work-card:hover a .title {
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
