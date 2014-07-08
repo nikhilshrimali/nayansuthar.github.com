@@ -78,7 +78,7 @@ body {
         }
         &:focus {
             outline-width: 0;
-            border-bottom: 2px solid $color-black;
+            border-bottom: 1px solid $color-black;
         }
     }
 
@@ -104,27 +104,20 @@ body {
     width: $social-icon-size;
     height: $social-icon-size;
     margin: 0 $gutter 0 0;
-    @include opacity(0.85);
-
     &:last-child { margin: 0; }
+
+    @include opacity(0.85);
+    background: url("../images/social-icon.png") no-repeat;
+    background-size: $social-icon-size*3 $social-icon-size;
+    background-position: 0 0;
+    &.github { background-position: -$social-icon-size 0; }
+    &.twitter { background-position: -$social-icon-size*2 0; }
 
     &:hover { @include opacity(1) }
     &:focus {
         outline-width: 0;
-        border-bottom: 2px solid $color-black;
-    }
-
-    &.email {
-        background: url("../images/email-icon.png") center no-repeat;
-        background-size: contain;
-    }
-    &.twitter {
-        background: url("../images/twitter-icon.png") center no-repeat;
-        background-size: contain;
-    }
-    &.github {
-        background: url("../images/github-icon.png") center no-repeat;
-        background-size: contain;
+        @include opacity(1);
+        @include box-shadow(0 1px 0 0 $color-bg, 0 2px 0 0 $color-black);
     }
 }
 

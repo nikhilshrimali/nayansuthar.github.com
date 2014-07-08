@@ -63,7 +63,7 @@ body {
 /* line 79, ../scss/screen.scss */
 .text a:focus {
   outline-width: 0;
-  border-bottom: 2px solid #363b47;
+  border-bottom: 1px solid #363b47;
 }
 /* line 85, ../scss/screen.scss */
 .text.intro {
@@ -89,39 +89,39 @@ body {
   margin: 0 15px 0 0;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=85);
   opacity: 0.85;
+  background: url("../images/social-icon.png") no-repeat;
+  background-size: 81px 27px;
+  background-position: 0 0;
 }
-/* line 109, ../scss/screen.scss */
+/* line 107, ../scss/screen.scss */
 .social-icon:last-child {
   margin: 0;
 }
-/* line 111, ../scss/screen.scss */
+/* line 113, ../scss/screen.scss */
+.social-icon.github {
+  background-position: -27px 0;
+}
+/* line 114, ../scss/screen.scss */
+.social-icon.twitter {
+  background-position: -54px 0;
+}
+/* line 116, ../scss/screen.scss */
 .social-icon:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-/* line 112, ../scss/screen.scss */
+/* line 117, ../scss/screen.scss */
 .social-icon:focus {
   outline-width: 0;
-  border-bottom: 2px solid #363b47;
-}
-/* line 117, ../scss/screen.scss */
-.social-icon.email {
-  background: url("../images/email-icon.png") center no-repeat;
-  background-size: contain;
-}
-/* line 121, ../scss/screen.scss */
-.social-icon.twitter {
-  background: url("../images/twitter-icon.png") center no-repeat;
-  background-size: contain;
-}
-/* line 125, ../scss/screen.scss */
-.social-icon.github {
-  background: url("../images/github-icon.png") center no-repeat;
-  background-size: contain;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  -webkit-box-shadow: 0 1px 0 0 #f9fafb, 0 2px 0 0 #363b47;
+  -moz-box-shadow: 0 1px 0 0 #f9fafb, 0 2px 0 0 #363b47;
+  box-shadow: 0 1px 0 0 #f9fafb, 0 2px 0 0 #363b47;
 }
 
 /*-- Separator Line --*/
-/* line 136, ../scss/screen.scss */
+/* line 129, ../scss/screen.scss */
 .separator-line {
   width: 210px;
   height: 1px;
@@ -133,25 +133,25 @@ body {
 }
 
 /*-- Work Card --*/
-/* line 149, ../scss/screen.scss */
+/* line 142, ../scss/screen.scss */
 .work-card {
   width: 210px;
   height: 210px;
   float: left;
   padding: 0 5px 15px;
 }
-/* line 155, ../scss/screen.scss */
+/* line 148, ../scss/screen.scss */
 .work-card img, .work-card a {
   display: block;
   width: 200px;
   height: 195px;
 }
-/* line 161, ../scss/screen.scss */
+/* line 154, ../scss/screen.scss */
 .work-card img {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=88);
   opacity: 0.88;
 }
-/* line 165, ../scss/screen.scss */
+/* line 158, ../scss/screen.scss */
 .work-card a {
   position: absolute;
   top: 0;
@@ -174,14 +174,14 @@ body {
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-/* line 177, ../scss/screen.scss */
+/* line 170, ../scss/screen.scss */
 .work-card a:focus, .work-card a:hover {
   outline-width: 0;
   padding: 15px 5px;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-/* line 181, ../scss/screen.scss */
+/* line 174, ../scss/screen.scss */
 .work-card a:focus .title, .work-card a:hover .title {
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -189,7 +189,7 @@ body {
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-/* line 184, ../scss/screen.scss */
+/* line 177, ../scss/screen.scss */
 .work-card a .title {
   width: 100%;
   position: absolute;
@@ -208,26 +208,26 @@ body {
   -o-transition: all 0.2s ease-in 0s;
   transition: all 0.2s ease-in 0s;
 }
-/* line 194, ../scss/screen.scss */
+/* line 187, ../scss/screen.scss */
 .work-card a .desc {
   font-size: 12px;
   font-weight: normal;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=85);
   opacity: 0.85;
 }
-/* line 201, ../scss/screen.scss */
+/* line 194, ../scss/screen.scss */
 .work-card:first-child {
   padding: 0 10px 15px 0;
 }
-/* line 203, ../scss/screen.scss */
+/* line 196, ../scss/screen.scss */
 .work-card:first-child a {
   left: 0;
 }
-/* line 205, ../scss/screen.scss */
+/* line 198, ../scss/screen.scss */
 .work-card:last-child {
   padding: 0 0 15px 10px;
 }
-/* line 207, ../scss/screen.scss */
+/* line 200, ../scss/screen.scss */
 .work-card:last-child a {
   left: 10px;
 }
