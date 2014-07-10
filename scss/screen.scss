@@ -82,6 +82,7 @@ body {
         }
     }
 
+    /* Intro text on home page */
     &.intro {
         height: $grid*2;
         margin-top: $grid*2;
@@ -107,7 +108,7 @@ body {
     &:last-child { margin: 0; }
 
     @include opacity(0.85);
-    background: url("../images/social-icon.png") no-repeat;
+    background: url("../images/home-page/social-icon.png") no-repeat;
     background-size: $social-icon-size*3 $social-icon-size;
     background-position: 0 0;
     &.github { background-position: -$social-icon-size 0; }
