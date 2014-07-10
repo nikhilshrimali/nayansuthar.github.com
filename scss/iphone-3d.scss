@@ -79,7 +79,7 @@ body {
                                     rgba(#38414a, 0.98) 50%, rgba(#262a33, 0.98) 90%,
                                     rgba(#6f7b87, 0.98) 97%, rgba(#030708, 0.98) 99%,
                                     rgba(#030708, 0.98) 99%, rgba(#3f4752, 0.98) 100%),
-        url("../images/iphone-3d/noise-lines.png");
+        url("/images/iphone-3d/noise-lines.png");
     }
     @for $i from 1 through 30 {
         .layer-#{$i}{
@@ -118,7 +118,7 @@ body {
     .screen {
         width: 220px;
         height: 380px;
-        background-image: url("../images/iphone-3d/screen.jpg");
+        background-image: url("/images/iphone-3d/screen.jpg");
         background-size: 100% 100%;
         position: absolute;
         top: 68px;
@@ -227,7 +227,7 @@ body {
             top: 50%;
             left: 50%;
             margin: -2px -27px;
-            background: url("../images/iphone-3d/speaker-texture.png") repeat;
+            background: url("/images/iphone-3d/speaker-texture.png") repeat;
             @include opacity(0.6);
             @include box-shadow (0 0 1px 1px rgba(#000, 0.1) inset, 0 0 0 1px rgba(#000, 0.5));
         }
@@ -355,7 +355,7 @@ body {
         left: 0;
         top: #{(530 - 430)/2}px;
         background: linear-gradient(rgba(#2e373e, 0.985) 0%, rgba(#232c35, 0.985) 100%),
-        url("../images/iphone-3d/noise.png");
+        url("/images/iphone-3d/noise.png");
     }
     .iphone-label {
         width: 100%;

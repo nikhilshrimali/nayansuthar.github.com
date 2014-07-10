@@ -7,6 +7,7 @@
 /*-- Variables --*/
 $color-bg         : #f9fafb;
 $color-black      : #363b47;
+$color-gray       : #ccc;
 $color-red        : #e15842;
 
 $base-line        : 5px;
@@ -43,6 +44,9 @@ body {
     max-width: $page-max-width;
     height: auto;
     margin: 0 auto;
+    &.inner-page {
+        padding: $grid 0;
+    }
 }
 
 
@@ -59,10 +63,33 @@ body {
 
 
 
+/*-- Page Title --*/
+.page-title {
+    width: 100%;
+    margin: 0 0 $grid/2;
+
+    text-align: center;
+    color: lighten($color-black, 10%);
+
+    &.with-subtitle { margin: 0; }
+}
+.subtitle {
+    width: 100%;
+    margin: $grid/5 0 $grid/2;
+
+    font-size: 14px;
+    text-align: center;
+    font-weight: light;
+    color: $color-gray;
+}
+
+
+
 
 /*-- Text --*/
 .text {
     width: 100%;
+    margin: 0 0 $grid/2;
     font-size: $body-font-size;
     line-height: $body-line-height;
     color: $color-black;
@@ -85,7 +112,7 @@ body {
     /* Intro text on home page */
     &.intro {
         height: $grid*2;
-        margin-top: $grid*2;
+        margin: $grid*2 0 0;
         text-align: center;
     }
 }
@@ -108,7 +135,7 @@ body {
     &:last-child { margin: 0; }
 
     @include opacity(0.85);
-    background: url("../images/home-page/social-icon.png") no-repeat;
+    background: url("/images/home-page/social-icon.png") no-repeat;
     background-size: $social-icon-size*3 $social-icon-size;
     background-position: 0 0;
     &.github { background-position: -$social-icon-size 0; }
@@ -200,5 +227,19 @@ body {
         padding: 0 0 $gutter $gutter*2/3;
         a { left: $gutter*2/3; }
     }
+}
 
+
+/*-- Big Image (100% of document) --*/
+img.big-image {
+    width: 100%;
+    margin: 0 0 $grid/2;
+}
+
+/*-- Image Label (use H6)--*/
+.image-label {
+    width: 100%;
+    text-align: center;
+    margin: -$grid/4 0 $grid/2;
+    color: rgba($color-black, 0.4);
 }
