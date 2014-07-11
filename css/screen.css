@@ -262,17 +262,42 @@ body.inner-page {
 }
 
 /*-- Big Image (100% of document) --*/
-/* line 234, ../scss/screen.scss */
+/* line 237, ../scss/screen.scss */
 img.big-image {
   width: 100%;
   margin: 0 0 52.5px;
 }
 
 /*-- Image Label (use H6)--*/
-/* line 240, ../scss/screen.scss */
+/* line 246, ../scss/screen.scss */
 .image-label {
   width: 100%;
   text-align: center;
   margin: -26.25px 0 52.5px;
   color: rgba(54, 59, 71, 0.4);
+}
+
+/*-- button --*/
+/* line 257, ../scss/screen.scss */
+.button {
+  padding: 15px 30px;
+  margin: 0 15px 0 0;
+  border: 1px solid #e15842;
+  color: #e15842;
+  text-decoration: none;
+}
+/* line 260, ../scss/screen.scss */
+.button:last-of-type {
+  margin: 0;
+}
+/* line 268, ../scss/screen.scss */
+.button:hover {
+  border-color: #de452c;
+}
+
+/*-- Footer --*/
+/* line 277, ../scss/screen.scss */
+.footer {
+  width: 100%;
+  text-align: center;
 }
