@@ -1,6 +1,5 @@
-/*-- Variables --*/
 /*-- Common Styles --*/
-/* line 28, ../scss/screen.scss */
+/* line 2, ../scss/globals/_commons.scss */
 * {
   padding: 0;
   margin: 0;
@@ -11,7 +10,7 @@
   font-family: "Noticia Text", calibri, arial;
 }
 
-/* line 35, ../scss/screen.scss */
+/* line 9, ../scss/globals/_commons.scss */
 html {
   width: 100%;
   height: 100%;
@@ -21,45 +20,103 @@ html {
   padding: 0 30px;
 }
 
-/* line 43, ../scss/screen.scss */
+/* line 17, ../scss/globals/_commons.scss */
 body {
-  max-width: 630px;
+  max-width: 600px;
+  padding: 100px 0;
   height: auto;
   margin: 0 auto;
 }
-/* line 47, ../scss/screen.scss */
-body.inner-page {
-  padding: 105px 0;
+
+/*-- Separator Line --*/
+/* line 25, ../scss/globals/_commons.scss */
+.separator-line {
+  width: 200px;
+  height: 1px;
+  background: -webkit-linear-gradient(left, #f9fafb, #363b47, #f9fafb);
+  margin: 0 auto;
+  margin-bottom: 99px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
+  opacity: 0.2;
+}
+
+/*-- Big Image (100% of document) --*/
+/* line 41, ../scss/globals/_commons.scss */
+img.big-image {
+  width: 100%;
+  margin: 0 0 50px;
+}
+
+/* line 46, ../scss/globals/_commons.scss */
+img.small-image {
+  display: block;
+  width: 60%;
+  margin: 0 auto 50px;
+}
+
+/*-- Image Label (use H6)--*/
+/* line 57, ../scss/globals/_commons.scss */
+.image-label {
+  width: 100%;
+  text-align: center;
+  margin: -25px 0 50px;
+  color: rgba(54, 59, 71, 0.4);
+}
+
+/*-- button --*/
+/* line 68, ../scss/globals/_commons.scss */
+.button {
+  padding: 15px 30px;
+  margin: 0 15px 0 0;
+  border: 1px solid #e15842;
+  color: #e15842;
+  text-decoration: none;
+}
+/* line 71, ../scss/globals/_commons.scss */
+.button:last-of-type {
+  margin: 0;
+}
+/* line 79, ../scss/globals/_commons.scss */
+.button:hover {
+  border-color: #de452c;
+}
+
+/*-- Footer --*/
+/* line 88, ../scss/globals/_commons.scss */
+.footer {
+  width: 100%;
+  text-align: center;
 }
 
 /*-- Layout --*/
-/* line 57, ../scss/screen.scss */
+/* line 95, ../scss/globals/_commons.scss */
 .row {
   width: 100%;
   overflow: hidden;
+  clear: both;
 }
-/* line 60, ../scss/screen.scss */
+/* line 99, ../scss/globals/_commons.scss */
 .row.margin-bottom {
-  margin-bottom: 210px;
+  margin-bottom: 200px;
 }
 
 /*-- Page Title --*/
-/* line 67, ../scss/screen.scss */
+/* line 106, ../scss/globals/_commons.scss */
 .page-title {
   width: 100%;
-  margin: 0 0 52.5px;
+  margin: 0 0 50px;
   text-align: center;
   color: #4c5364;
 }
-/* line 74, ../scss/screen.scss */
+/* line 113, ../scss/globals/_commons.scss */
 .page-title.with-subtitle {
   margin: 0;
 }
 
-/* line 76, ../scss/screen.scss */
+/* line 115, ../scss/globals/_commons.scss */
 .subtitle {
   width: 100%;
-  margin: 21px 0 52.5px;
+  margin: 20px 0 50px;
   font-size: 14px;
   text-align: center;
   font-weight: light;
@@ -67,50 +124,50 @@ body.inner-page {
 }
 
 /*-- Text --*/
-/* line 90, ../scss/screen.scss */
+/* line 129, ../scss/globals/_commons.scss */
 .text {
   width: 100%;
-  margin: 0 0 52.5px;
+  margin: 0 0 50px;
   font-size: 17px;
   line-height: 25px;
   color: #363b47;
   cursor: default;
   /* Intro text on home page */
 }
-/* line 97, ../scss/screen.scss */
+/* line 136, ../scss/globals/_commons.scss */
 .text a {
   display: inline-block;
   text-decoration: none;
   color: #575f72;
   border-bottom: 1px solid rgba(54, 59, 71, 0.06);
 }
-/* line 102, ../scss/screen.scss */
+/* line 141, ../scss/globals/_commons.scss */
 .text a:hover {
   color: #363b47;
   border-bottom: 1px solid #363b47;
 }
-/* line 106, ../scss/screen.scss */
+/* line 145, ../scss/globals/_commons.scss */
 .text a:focus {
   outline-width: 0;
   border-bottom: 1px solid #363b47;
 }
-/* line 113, ../scss/screen.scss */
+/* line 152, ../scss/globals/_commons.scss */
 .text.intro {
-  height: 210px;
-  margin: 210px 0 0;
+  height: 200px;
+  margin: 200px 0 0;
   text-align: center;
 }
 
 /*-- Social Links --*/
-/* line 124, ../scss/screen.scss */
+/* line 2, ../scss/pages/_home.scss */
 .social-icons-wrapper {
   width: 100%;
   height: 27px;
-  margin: 0 0 183px;
+  margin: 0 0 173px;
   text-align: center;
 }
 
-/* line 130, ../scss/screen.scss */
+/* line 8, ../scss/pages/_home.scss */
 .social-icon {
   display: inline-block;
   width: 27px;
@@ -122,24 +179,24 @@ body.inner-page {
   background-size: 81px 27px;
   background-position: 0 0;
 }
-/* line 135, ../scss/screen.scss */
+/* line 13, ../scss/pages/_home.scss */
 .social-icon:last-child {
   margin: 0;
 }
-/* line 141, ../scss/screen.scss */
+/* line 19, ../scss/pages/_home.scss */
 .social-icon.github {
   background-position: -27px 0;
 }
-/* line 142, ../scss/screen.scss */
+/* line 20, ../scss/pages/_home.scss */
 .social-icon.twitter {
   background-position: -54px 0;
 }
-/* line 144, ../scss/screen.scss */
+/* line 22, ../scss/pages/_home.scss */
 .social-icon:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-/* line 145, ../scss/screen.scss */
+/* line 23, ../scss/pages/_home.scss */
 .social-icon:focus {
   outline-width: 0;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
@@ -149,38 +206,26 @@ body.inner-page {
   box-shadow: 0 1px 0 0 #f9fafb, 0 2px 0 0 #363b47;
 }
 
-/*-- Separator Line --*/
-/* line 157, ../scss/screen.scss */
-.separator-line {
-  width: 210px;
-  height: 1px;
-  background: -webkit-linear-gradient(left, #f9fafb, #363b47, #f9fafb);
-  margin: 0 auto;
-  margin-bottom: 104px;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
-  opacity: 0.2;
-}
-
 /*-- Work Card --*/
-/* line 170, ../scss/screen.scss */
+/* line 32, ../scss/pages/_home.scss */
 .work-card {
-  width: 210px;
-  height: 210px;
+  width: 200px;
+  height: 200px;
   float: left;
   padding: 0 5px 15px;
 }
-/* line 176, ../scss/screen.scss */
+/* line 38, ../scss/pages/_home.scss */
 .work-card img, .work-card a {
   display: block;
-  width: 200px;
-  height: 195px;
+  width: 190px;
+  height: 185px;
 }
-/* line 182, ../scss/screen.scss */
+/* line 44, ../scss/pages/_home.scss */
 .work-card img {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=88);
   opacity: 0.88;
 }
-/* line 186, ../scss/screen.scss */
+/* line 48, ../scss/pages/_home.scss */
 .work-card a {
   position: absolute;
   top: 0;
@@ -203,14 +248,14 @@ body.inner-page {
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-/* line 198, ../scss/screen.scss */
+/* line 60, ../scss/pages/_home.scss */
 .work-card a:focus, .work-card a:hover {
   outline-width: 0;
   padding: 15px 5px;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-/* line 202, ../scss/screen.scss */
+/* line 64, ../scss/pages/_home.scss */
 .work-card a:focus .title, .work-card a:hover .title {
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -218,7 +263,7 @@ body.inner-page {
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-/* line 205, ../scss/screen.scss */
+/* line 67, ../scss/pages/_home.scss */
 .work-card a .title {
   width: 100%;
   position: absolute;
@@ -237,67 +282,35 @@ body.inner-page {
   -o-transition: all 0.2s ease-in 0s;
   transition: all 0.2s ease-in 0s;
 }
-/* line 215, ../scss/screen.scss */
+/* line 77, ../scss/pages/_home.scss */
 .work-card a .desc {
   font-size: 12px;
   font-weight: normal;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=85);
   opacity: 0.85;
 }
-/* line 222, ../scss/screen.scss */
+/* line 84, ../scss/pages/_home.scss */
 .work-card:first-child {
   padding: 0 10px 15px 0;
 }
-/* line 224, ../scss/screen.scss */
+/* line 86, ../scss/pages/_home.scss */
 .work-card:first-child a {
   left: 0;
 }
-/* line 226, ../scss/screen.scss */
+/* line 88, ../scss/pages/_home.scss */
 .work-card:last-child {
   padding: 0 0 15px 10px;
 }
-/* line 228, ../scss/screen.scss */
+/* line 90, ../scss/pages/_home.scss */
 .work-card:last-child a {
   left: 10px;
 }
 
-/*-- Big Image (100% of document) --*/
-/* line 237, ../scss/screen.scss */
-img.big-image {
-  width: 100%;
-  margin: 0 0 52.5px;
+/* line 1, ../scss/pages/_12-great-men.scss */
+#page-12-great-men {
+  /*-- Individual Images --*/
 }
-
-/*-- Image Label (use H6)--*/
-/* line 246, ../scss/screen.scss */
-.image-label {
-  width: 100%;
-  text-align: center;
-  margin: -26.25px 0 52.5px;
-  color: rgba(54, 59, 71, 0.4);
-}
-
-/*-- button --*/
-/* line 257, ../scss/screen.scss */
-.button {
-  padding: 15px 30px;
-  margin: 0 15px 0 0;
-  border: 1px solid #e15842;
-  color: #e15842;
-  text-decoration: none;
-}
-/* line 260, ../scss/screen.scss */
-.button:last-of-type {
-  margin: 0;
-}
-/* line 268, ../scss/screen.scss */
-.button:hover {
-  border-color: #de452c;
-}
-
-/*-- Footer --*/
-/* line 277, ../scss/screen.scss */
-.footer {
-  width: 100%;
-  text-align: center;
+/* line 3, ../scss/pages/_12-great-men.scss */
+#page-12-great-men .img-12gm {
+  background: url("/images/12-great-men/12-great-men-individuals.png");
 }

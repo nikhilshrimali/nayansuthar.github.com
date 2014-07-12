@@ -1,0 +1,92 @@
+/*-- Social Links --*/
+.social-icons-wrapper {
+    width: 100%;
+    height: $social-icon-size;
+    margin: 0 0 ($grid*2 - $social-icon-size);
+    text-align: center;
+}
+.social-icon {
+    display: inline-block;
+    width: $social-icon-size;
+    height: $social-icon-size;
+    margin: 0 $gutter 0 0;
+    &:last-child { margin: 0; }
+
+    @include opacity(0.85);
+    background: url("/images/home-page/social-icon.png") no-repeat;
+    background-size: $social-icon-size*3 $social-icon-size;
+    background-position: 0 0;
+    &.github { background-position: -$social-icon-size 0; }
+    &.twitter { background-position: -$social-icon-size*2 0; }
+
+    &:hover { @include opacity(1) }
+    &:focus {
+        outline-width: 0;
+        @include opacity(1);
+        @include box-shadow(0 1px 0 0 $color-bg, 0 2px 0 0 $color-black);
+    }
+}
+
+
+/*-- Work Card --*/
+.work-card {
+    width: $grid*2;
+    height: $grid*2;
+    float: left;
+    padding: 0 $gutter/3 $gutter;
+
+    img, a {
+        display: block;
+        width: ($grid*2 - $gutter*2/3);
+        height: ($grid*2 - $gutter);
+    }
+
+    img {
+        @include opacity(0.88);
+    }
+
+    a {
+        position: absolute;
+        top: 0;
+        left: $gutter/3;
+        padding: $gutter*3/2 $gutter/3;
+        color: $color-black;
+        text-decoration: none;
+        text-align: center;
+        background: rgba($color-bg, 0.8);
+        @include opacity(0);
+        @include transition(all 0.2s ease-in 0s);
+        @include translate3d(0,0,0);
+        &:focus, &:hover {
+            outline-width: 0;
+            padding: $gutter $gutter/3;
+            @include opacity(1);
+            .title { @include translateY(-50%); }
+        }
+
+        .title {
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            font-size: 18px;
+            margin: 0 0 $gutter;
+            @include translateY(-20%);
+            @include transition(all 0.2s ease-in 0s);
+        }
+        .desc {
+            font-size: 12px;
+            font-weight: normal;
+            @include opacity(0.85);
+        }
+    }
+
+    &:first-child {
+        padding: 0 $gutter*2/3 $gutter 0;
+        a { left: 0; }
+    }
+    &:last-child {
+        padding: 0 0 $gutter $gutter*2/3;
+        a { left: $gutter*2/3; }
+    }
+}

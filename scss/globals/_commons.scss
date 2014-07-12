@@ -1,0 +1,157 @@
+/*-- Common Styles --*/
+* {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    @include box-sizing(border-box);
+    font-family: "Noticia Text", calibri, arial;
+}
+html {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: $color-bg;
+    padding: 0 $gutter*2;
+}
+body {
+    max-width: $page-max-width;
+    padding: $grid 0;
+    height: auto;
+    margin: 0 auto;
+}
+
+/*-- Separator Line --*/
+.separator-line {
+    width: $grid*2;
+    height: 1px;
+    background: -webkit-linear-gradient(left,$color-bg,$color-black,$color-bg);
+    margin: 0 auto;
+    margin-bottom: ($grid - 1px);
+    @include opacity(0.2);
+}
+
+
+
+
+
+
+
+/*-- Big Image (100% of document) --*/
+img.big-image {
+    width: 100%;
+    margin: 0 0 $grid/2;
+}
+
+img.small-image {
+    display: block;
+    width: 60%;
+    margin: 0 auto $grid/2;
+}
+
+
+
+
+
+/*-- Image Label (use H6)--*/
+.image-label {
+    width: 100%;
+    text-align: center;
+    margin: -$grid/4 0 $grid/2;
+    color: rgba($color-black, 0.4);
+}
+
+
+
+
+/*-- button --*/
+.button {
+    padding: $gutter $gutter*2;
+    margin: 0 $gutter 0 0;
+    &:last-of-type {
+        margin: 0;
+    }
+
+    border: 1px solid $color-red;
+    color: $color-red;
+    text-decoration: none;
+
+    &:hover {
+        border-color: darken($color-red, 5%);
+    }
+}
+
+
+
+
+/*-- Footer --*/
+.footer {
+    width: 100%;
+    text-align: center;
+}
+
+
+/*-- Layout --*/
+.row {
+    width: 100%;
+    overflow: hidden;
+    clear: both;
+    &.margin-bottom { margin-bottom: $grid*2; }
+}
+
+
+
+
+/*-- Page Title --*/
+.page-title {
+    width: 100%;
+    margin: 0 0 $grid/2;
+
+    text-align: center;
+    color: lighten($color-black, 10%);
+
+    &.with-subtitle { margin: 0; }
+}
+.subtitle {
+    width: 100%;
+    margin: $grid/5 0 $grid/2;
+
+    font-size: 14px;
+    text-align: center;
+    font-weight: light;
+    color: $color-gray;
+}
+
+
+
+
+/*-- Text --*/
+.text {
+    width: 100%;
+    margin: 0 0 $grid/2;
+    font-size: $body-font-size;
+    line-height: $body-line-height;
+    color: $color-black;
+    cursor: default;
+    a {
+        display: inline-block;
+        text-decoration: none;
+        color: lighten($color-black, 15%);
+        border-bottom: 1px solid rgba($color-black, 0.06);
+        &:hover {
+            color: $color-black;
+            border-bottom: 1px solid $color-black;
+        }
+        &:focus {
+            outline-width: 0;
+            border-bottom: 1px solid $color-black;
+        }
+    }
+
+    /* Intro text on home page */
+    &.intro {
+        height: $grid*2;
+        margin: $grid*2 0 0;
+        text-align: center;
+    }
+}
