@@ -1,0 +1,35 @@
+//--------------------------------------
+// Images
+//--------------------------------------
+/*
+  Big Image
+  Small Image
+*/
+
+
+// Big Image
+.big-image {
+    width: $h-gutter *26;
+    margin: 0 0 $v-gutter*2;
+}
+
+
+// Small Image
+.small-image {
+    display: block;
+    width: $h-gutter * 16;
+    margin: 0 auto $v-gutter*2;
+}
+
+
+// Image Label - <h6>
+.image-label {
+    display: block;
+    padding: 2px 0 10px;
+    margin: 0 0 $v-gutter*2;
+
+    font-size: 12px;
+    line-height: $v-gutter;
+    text-align: center;
+    color: $color-gray;
+}

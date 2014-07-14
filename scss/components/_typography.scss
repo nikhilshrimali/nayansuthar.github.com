@@ -43,25 +43,72 @@ a {
 }
 
 
-/* // Title */
-/* .title { */
-/*     width: 100%; */
-/*     margin: 0 0 $grid/2; */
 
-/*     text-align: center; */
-/*     color: lighten($color-black, 10%); */
+// Title - <h1>
+.title {
+    width: 100%;
+    padding: 2px 0 10px;
+    margin: 0 0 $v-gutter*5;
 
-/*     &.with-subtitle { margin: 0; } */
+    font-size: 32px;
+    line-height: $v-gutter*4;
+    text-align: center;
+    color: lighten($color-black, 10%);
+
+    &.with-subtitle { margin: 0; }
+}
+
+
+
+// Subtitle - <h2>
+.subtitle {
+    width: 100%;
+    padding: 9px 0 3px;
+    margin: 0 0 $v-gutter*3;
+
+    font-size: 15px;
+    line-height: $v-gutter * 2;
+    font-weight: light;
+    text-align: center;
+    color: $color-gray;
+}
+
+
+
+
+
+
+/* /\*-- button --*\/ */
+/* .button { */
+/*     padding: ($base-line * 2)  ($base-line * 2); */
+/*     margin: 0 ($base-line * 4) 0 0; */
+/*     &:last-of-type { */
+/*         margin: 0; */
+/*     } */
+
+/*     border: 1px solid $color-red; */
+/*     color: $color-red; */
+/*     text-decoration: none; */
+
+/*     &:hover { */
+/*         border-color: darken($color-red, 5%); */
+/*     } */
 /* } */
 
 
-/* // Subtitle */
-/* .subtitle { */
-/*     width: 100%; */
-/*     margin: $grid/5 0 $grid/2; */
 
-/*     font-size: 14px; */
+
+/* /\*-- Footer --*\/ */
+/* .footer { */
+/*     width: 100%; */
 /*     text-align: center; */
-/*     font-weight: light; */
-/*     color: $color-gray; */
+/* } */
+
+
+/* /\*-- Layout --*\/ */
+/* .row { */
+/*     width: 100%; */
+/*     overflow: hidden; */
+/*     clear: both; */
+/*     &.margin-bottom { margin-bottom: $grid*2; } */
 /* } */

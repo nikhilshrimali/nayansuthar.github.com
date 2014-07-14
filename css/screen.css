@@ -27,7 +27,7 @@ html {
 body {
   max-width: 672px;
   padding: 120px 24px;
-  /* background-image: url("/images/commons/base-line.png"); */
+  background-image: url("/images/commons/base-line.png");
   margin: 0 auto;
 }
 
@@ -37,49 +37,6 @@ body {
   overflow: hidden;
 }
 
-/* /\*-- Big Image (100% of document) --*\/ */
-/* img.big-image { */
-/*     width: 100%; */
-/*     margin: 0 0 $grid/2; */
-/* } */
-/* img.small-image { */
-/*     display: block; */
-/*     width: 60%; */
-/*     margin: 0 auto $grid/2; */
-/* } */
-/* /\*-- Image Label (use H6)--*\/ */
-/* .image-label { */
-/*     width: 100%; */
-/*     text-align: center; */
-/*     margin: -$grid/4 0 $grid/2; */
-/*     color: rgba($color-black, 0.4); */
-/* } */
-/* /\*-- button --*\/ */
-/* .button { */
-/*     padding: ($base-line * 2)  ($base-line * 2); */
-/*     margin: 0 ($base-line * 4) 0 0; */
-/*     &:last-of-type { */
-/*         margin: 0; */
-/*     } */
-/*     border: 1px solid $color-red; */
-/*     color: $color-red; */
-/*     text-decoration: none; */
-/*     &:hover { */
-/*         border-color: darken($color-red, 5%); */
-/*     } */
-/* } */
-/* /\*-- Footer --*\/ */
-/* .footer { */
-/*     width: 100%; */
-/*     text-align: center; */
-/* } */
-/* /\*-- Layout --*\/ */
-/* .row { */
-/*     width: 100%; */
-/*     overflow: hidden; */
-/*     clear: both; */
-/*     &.margin-bottom { margin-bottom: $grid*2; } */
-/* } */
 /*
   Paragraph
   Link
@@ -114,22 +71,58 @@ a:hover, a:focus {
   color: #363b47;
 }
 
-/* // Title */
-/* .title { */
-/*     width: 100%; */
-/*     margin: 0 0 $grid/2; */
-/*     text-align: center; */
-/*     color: lighten($color-black, 10%); */
-/*     &.with-subtitle { margin: 0; } */
+/* line 48, ../scss/components/_typography.scss */
+.title {
+  width: 100%;
+  padding: 2px 0 10px;
+  margin: 0 0 60px;
+  font-size: 32px;
+  line-height: 48px;
+  text-align: center;
+  color: #4c5364;
+}
+/* line 58, ../scss/components/_typography.scss */
+.title.with-subtitle {
+  margin: 0;
+}
+
+/* line 64, ../scss/components/_typography.scss */
+.subtitle {
+  width: 100%;
+  padding: 9px 0 3px;
+  margin: 0 0 36px;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: light;
+  text-align: center;
+  color: #cccccc;
+}
+
+/* /\*-- button --*\/ */
+/* .button { */
+/*     padding: ($base-line * 2)  ($base-line * 2); */
+/*     margin: 0 ($base-line * 4) 0 0; */
+/*     &:last-of-type { */
+/*         margin: 0; */
+/*     } */
+/*     border: 1px solid $color-red; */
+/*     color: $color-red; */
+/*     text-decoration: none; */
+/*     &:hover { */
+/*         border-color: darken($color-red, 5%); */
+/*     } */
 /* } */
-/* // Subtitle */
-/* .subtitle { */
+/* /\*-- Footer --*\/ */
+/* .footer { */
 /*     width: 100%; */
-/*     margin: $grid/5 0 $grid/2; */
-/*     font-size: 14px; */
 /*     text-align: center; */
-/*     font-weight: light; */
-/*     color: $color-gray; */
+/* } */
+/* /\*-- Layout --*\/ */
+/* .row { */
+/*     width: 100%; */
+/*     overflow: hidden; */
+/*     clear: both; */
+/*     &.margin-bottom { margin-bottom: $grid*2; } */
 /* } */
 /* line 5, ../scss/components/_separator-line.scss */
 .separator-line {
@@ -141,6 +134,34 @@ a:hover, a:focus {
   margin-bottom: 119px;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
   opacity: 0.2;
+}
+
+/*
+  Big Image
+  Small Image
+*/
+/* line 11, ../scss/components/_images.scss */
+.big-image {
+  width: 624px;
+  margin: 0 0 24px;
+}
+
+/* line 18, ../scss/components/_images.scss */
+.small-image {
+  display: block;
+  width: 384px;
+  margin: 0 auto 24px;
+}
+
+/* line 26, ../scss/components/_images.scss */
+.image-label {
+  display: block;
+  padding: 2px 0 10px;
+  margin: 0 0 24px;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  color: #cccccc;
 }
 
 /*
