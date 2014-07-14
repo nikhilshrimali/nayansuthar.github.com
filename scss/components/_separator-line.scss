@@ -1,0 +1,13 @@
+// -------------------------------------
+// Variables
+// -------------------------------------
+
+.separator-line {
+    width: $h-gutter * 10;
+    height: 1px;
+    background: -webkit-linear-gradient(left,$color-bg,$color-black,$color-bg);
+    margin: 0 auto;
+    margin-top: $v-gutter*10;
+    margin-bottom: ($v-gutter*10) - 1px;
+    @include opacity(0.2);
+}

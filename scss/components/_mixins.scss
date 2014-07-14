@@ -1,3 +1,4 @@
+/*-- Animations --*/
 @mixin animation ($name:no-name, $dur:3s, $tf:linear, $itc:infinite, $del:0s ) {
     animation: $name $dur $tf $itc $del;
     -webkit-animation: $name $dur $tf $itc $del;
@@ -6,6 +7,7 @@
     -o-animation: $name $dur $tf $itc $del;
 }
 
+/*-- Kay Frames --*/
 @mixin keyframes ($name) {
     @keyframes $name { @content }
     @-webkit-keyframes $name { @content }
@@ -14,7 +16,8 @@
     @-o-keyframes $name { @content }
 }
 
-@mixin my-transform ($value) {
+/*-- Transforms --*/
+@mixin transforms ($value) {
     transform: $value;
     -webkit-transform: $value;
     -moz-transform: $value;

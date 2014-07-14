@@ -1,8 +1,13 @@
 @import "compass";
 
-@import "globals/variables";
-@import "globals/mixins";
-@import "globals/commons";
+@import "variables";
+
+@import "components/mixins";
+@import "components/reset";
+@import "components/layout";
+@import "components/typography";
+@import "components/separator-line";
+
 
 @import "pages/home";
-@import "pages/12-great-men";
+/* @import "pages/12-great-men"; */

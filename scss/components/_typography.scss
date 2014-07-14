@@ -1,0 +1,67 @@
+//--------------------------------------
+// Base
+//--------------------------------------
+/*
+  Paragraph
+  Link
+*/
+
+
+
+// Paragraph
+p {
+    width: 100%;
+    padding: 7px 0 5px;
+    margin: 0 0 ($v-gutter * 4);
+    cursor: default;
+
+    font-family: $p-font-family;
+    font-size: $p-font-size;
+    line-height: $p-line-height;
+    color: $p-text-color;
+
+    &.center {
+        text-align: center;
+    }
+}
+
+
+
+// Link
+a {
+    display: inline-block;
+
+    font-family: $link-font-family;
+    font-size: $link-font-size;
+    line-height: $link-line-height;
+    text-decoration: none;
+    color: $link-text-color;
+
+    &:hover, &:focus {
+        color: $color-black;
+    }
+}
+
+
+/* // Title */
+/* .title { */
+/*     width: 100%; */
+/*     margin: 0 0 $grid/2; */
+
+/*     text-align: center; */
+/*     color: lighten($color-black, 10%); */
+
+/*     &.with-subtitle { margin: 0; } */
+/* } */
+
+
+/* // Subtitle */
+/* .subtitle { */
+/*     width: 100%; */
+/*     margin: $grid/5 0 $grid/2; */
+
+/*     font-size: 14px; */
+/*     text-align: center; */
+/*     font-weight: light; */
+/*     color: $color-gray; */
+/* } */

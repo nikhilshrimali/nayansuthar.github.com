@@ -1,0 +1,101 @@
+//--------------------------------------
+// Layout
+//--------------------------------------
+
+
+html {
+    width: 100%;
+    background-color: $color-bg;
+}
+
+body {
+    max-width: $page-max-width;
+    padding: $v-gutter*10 $h-gutter;
+    /* background-image: url("/images/commons/base-line.png"); */
+    margin: 0 auto;
+}
+
+.clearfix {
+    clear: both;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* /\*-- Big Image (100% of document) --*\/ */
+/* img.big-image { */
+/*     width: 100%; */
+/*     margin: 0 0 $grid/2; */
+/* } */
+
+/* img.small-image { */
+/*     display: block; */
+/*     width: 60%; */
+/*     margin: 0 auto $grid/2; */
+/* } */
+
+
+
+
+
+/* /\*-- Image Label (use H6)--*\/ */
+/* .image-label { */
+/*     width: 100%; */
+/*     text-align: center; */
+/*     margin: -$grid/4 0 $grid/2; */
+/*     color: rgba($color-black, 0.4); */
+/* } */
+
+
+
+
+/* /\*-- button --*\/ */
+/* .button { */
+/*     padding: ($base-line * 2)  ($base-line * 2); */
+/*     margin: 0 ($base-line * 4) 0 0; */
+/*     &:last-of-type { */
+/*         margin: 0; */
+/*     } */
+
+/*     border: 1px solid $color-red; */
+/*     color: $color-red; */
+/*     text-decoration: none; */
+
+/*     &:hover { */
+/*         border-color: darken($color-red, 5%); */
+/*     } */
+/* } */
+
+
+
+
+/* /\*-- Footer --*\/ */
+/* .footer { */
+/*     width: 100%; */
+/*     text-align: center; */
+/* } */
+
+
+/* /\*-- Layout --*\/ */
+/* .row { */
+/*     width: 100%; */
+/*     overflow: hidden; */
+/*     clear: both; */
+/*     &.margin-bottom { margin-bottom: $grid*2; } */
+/* } */

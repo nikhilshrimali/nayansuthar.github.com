@@ -1,0 +1,41 @@
+// -------------------------------------
+// Variables
+// -------------------------------------
+/*
+  Colors
+  Base line grid
+  Layout
+  Typography
+*/
+
+
+
+// Colors
+$color-bg         : #f9fafb;
+$color-black      : #363b47;
+$color-gray       : #ccc;
+$color-red        : #e15842;
+
+
+
+// Base Line and Grid
+$v-gutter         : 12px; // Base-line
+$h-gutter         : 24px;
+
+
+
+// Layout
+$page-max-width   : ($h-gutter * 26) + ($h-gutter * 2); // 600px + 24px padding
+
+
+
+// COMPONENT - Typography
+$p-font-size   : 17px;
+$p-line-height : $v-gutter * 2;
+$p-font-family : "Noticia Text", calibri, arial;
+$p-text-color  : $color-black;
+
+$link-font-size   : 17px;
+$link-line-height : $v-gutter * 2;
+$link-font-family : "Noticia Text", calibri, arial;
+$link-text-color  : lighten($color-black, 15%);
