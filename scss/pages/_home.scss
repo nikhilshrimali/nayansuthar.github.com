@@ -50,6 +50,9 @@ $social-icon-size : $v-gutter * 2;
 
 
 // Work Card
+.work-cards-wrapper {
+    margin-top: (($v-gutter* 15) - 1px);
+}
 .work-card {
     width: $h-gutter * 8;
     max-width: 100%;
