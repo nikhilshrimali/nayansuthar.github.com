@@ -10,6 +10,7 @@
 // Big Image
 .big-image {
     width: $h-gutter *26;
+    max-width: 100%;
     margin: 0 0 $v-gutter*2;
 }
 
@@ -18,6 +19,7 @@
 .small-image {
     display: block;
     width: $h-gutter * 16;
+    max-width: 100%;
     margin: 0 auto $v-gutter*2;
 }
 

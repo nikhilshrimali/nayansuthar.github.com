@@ -1,6 +1,75 @@
-#great-men-page {
-    /*-- Individual Images --*/
+$img-12gm-b: $h-gutter * 16;
+$img-12gm-m: $h-gutter * 12;
+$img-12gm-s: $h-gutter * 10;
+
+@mixin img-12gm($x, $y, $size) {
+    background-position: (-$size*$x) (-$size*$y);
+}
+
+/*-- Individual Images --*/
+.img-12gm {
+    width: $img-12gm-b;
+    height: $img-12gm-b;
+    background: url("/images/12-great-men/12-great-men-individuals.png");
+    background-size: ($img-12gm-b*3) ($img-12gm-b*4);
+    &.steve-jobs            { @include img-12gm(0, 0, $img-12gm-b); }
+    &.alan-turing           { @include img-12gm(1, 0, $img-12gm-b); }
+    &.don-knuth             { @include img-12gm(2, 0, $img-12gm-b); }
+    &.john-mccarthy         { @include img-12gm(0, 1, $img-12gm-b); }
+    &.johnan-sebastian-bach { @include img-12gm(1, 1, $img-12gm-b); }
+    &.linus-torvalds        { @include img-12gm(2, 1, $img-12gm-b); }
+    &.isaac-newton          { @include img-12gm(0, 2, $img-12gm-b); }
+    &.rich-hickey           { @include img-12gm(1, 2, $img-12gm-b); }
+    &.richard-stallman      { @include img-12gm(2, 2, $img-12gm-b); }
+    &.m-c-escher            { @include img-12gm(0, 3, $img-12gm-b); }
+    &.nikola-tesla          { @include img-12gm(1, 3, $img-12gm-b); }
+    &.dieter-rams           { @include img-12gm(2, 3, $img-12gm-b); }
+}
+
+@media screen and (max-width:$page-max-width) {
     .img-12gm {
-        background: url("/images/12-great-men/12-great-men-individuals.png");
+        width: $img-12gm-m;
+        height: $img-12gm-m;
+        background-size: ($img-12gm-m*3) ($img-12gm-m*4);
+        &.steve-jobs            { @include img-12gm(0, 0, $img-12gm-m); }
+        &.alan-turing           { @include img-12gm(1, 0, $img-12gm-m); }
+        &.don-knuth             { @include img-12gm(2, 0, $img-12gm-m); }
+        &.john-mccarthy         { @include img-12gm(0, 1, $img-12gm-m); }
+        &.johnan-sebastian-bach { @include img-12gm(1, 1, $img-12gm-m); }
+        &.linus-torvalds        { @include img-12gm(2, 1, $img-12gm-m); }
+        &.isaac-newton          { @include img-12gm(0, 2, $img-12gm-m); }
+        &.rich-hickey           { @include img-12gm(1, 2, $img-12gm-m); }
+        &.richard-stallman      { @include img-12gm(2, 2, $img-12gm-m); }
+        &.m-c-escher            { @include img-12gm(0, 3, $img-12gm-m); }
+        &.nikola-tesla          { @include img-12gm(1, 3, $img-12gm-m); }
+        &.dieter-rams           { @include img-12gm(2, 3, $img-12gm-m); }
     }
+}
+
+@media screen and (max-width: $h-gutter*18) {
+    .img-12gm {
+        width: $img-12gm-s;
+        height: $img-12gm-s;
+        background-size: ($img-12gm-s*3) ($img-12gm-s*4);
+        &.steve-jobs            { @include img-12gm(0, 0, $img-12gm-s); }
+        &.alan-turing           { @include img-12gm(1, 0, $img-12gm-s); }
+        &.don-knuth             { @include img-12gm(2, 0, $img-12gm-s); }
+        &.john-mccarthy         { @include img-12gm(0, 1, $img-12gm-s); }
+        &.johnan-sebastian-bach { @include img-12gm(1, 1, $img-12gm-s); }
+        &.linus-torvalds        { @include img-12gm(2, 1, $img-12gm-s); }
+        &.isaac-newton          { @include img-12gm(0, 2, $img-12gm-s); }
+        &.rich-hickey           { @include img-12gm(1, 2, $img-12gm-s); }
+        &.richard-stallman      { @include img-12gm(2, 2, $img-12gm-s); }
+        &.m-c-escher            { @include img-12gm(0, 3, $img-12gm-s); }
+        &.nikola-tesla          { @include img-12gm(1, 3, $img-12gm-s); }
+        &.dieter-rams           { @include img-12gm(2, 3, $img-12gm-s); }
+    }
+}
+
+.image-label + .img-12gm {
+    margin-top: $v-gutter*10;
+}
+
+.all-12gm-image {
+    margin-bottom: $v-gutter*2 + 4px;
 }

@@ -143,17 +143,19 @@ a:hover, a:focus {
 /* line 11, ../scss/components/_images.scss */
 .big-image {
   width: 624px;
+  max-width: 100%;
   margin: 0 0 24px;
 }
 
-/* line 18, ../scss/components/_images.scss */
+/* line 19, ../scss/components/_images.scss */
 .small-image {
   display: block;
   width: 384px;
+  max-width: 100%;
   margin: 0 auto 24px;
 }
 
-/* line 26, ../scss/components/_images.scss */
+/* line 28, ../scss/components/_images.scss */
 .image-label {
   display: block;
   padding: 2px 0 10px;
@@ -322,4 +324,181 @@ a:hover, a:focus {
     width: 240px;
   }
 }
-/* @import "pages/12-great-men"; */
+/*-- Individual Images --*/
+/* line 10, ../scss/pages/_12-great-men.scss */
+.img-12gm {
+  width: 384px;
+  height: 384px;
+  background: url("/images/12-great-men/12-great-men-individuals.png");
+  background-size: 1152px 1536px;
+}
+/* line 15, ../scss/pages/_12-great-men.scss */
+.img-12gm.steve-jobs {
+  background-position: 0px 0px;
+}
+/* line 16, ../scss/pages/_12-great-men.scss */
+.img-12gm.alan-turing {
+  background-position: -384px 0px;
+}
+/* line 17, ../scss/pages/_12-great-men.scss */
+.img-12gm.don-knuth {
+  background-position: -768px 0px;
+}
+/* line 18, ../scss/pages/_12-great-men.scss */
+.img-12gm.john-mccarthy {
+  background-position: 0px -384px;
+}
+/* line 19, ../scss/pages/_12-great-men.scss */
+.img-12gm.johnan-sebastian-bach {
+  background-position: -384px -384px;
+}
+/* line 20, ../scss/pages/_12-great-men.scss */
+.img-12gm.linus-torvalds {
+  background-position: -768px -384px;
+}
+/* line 21, ../scss/pages/_12-great-men.scss */
+.img-12gm.isaac-newton {
+  background-position: 0px -768px;
+}
+/* line 22, ../scss/pages/_12-great-men.scss */
+.img-12gm.rich-hickey {
+  background-position: -384px -768px;
+}
+/* line 23, ../scss/pages/_12-great-men.scss */
+.img-12gm.richard-stallman {
+  background-position: -768px -768px;
+}
+/* line 24, ../scss/pages/_12-great-men.scss */
+.img-12gm.m-c-escher {
+  background-position: 0px -1152px;
+}
+/* line 25, ../scss/pages/_12-great-men.scss */
+.img-12gm.nikola-tesla {
+  background-position: -384px -1152px;
+}
+/* line 26, ../scss/pages/_12-great-men.scss */
+.img-12gm.dieter-rams {
+  background-position: -768px -1152px;
+}
+
+@media screen and (max-width: 672px) {
+  /* line 30, ../scss/pages/_12-great-men.scss */
+  .img-12gm {
+    width: 288px;
+    height: 288px;
+    background-size: 864px 1152px;
+  }
+  /* line 34, ../scss/pages/_12-great-men.scss */
+  .img-12gm.steve-jobs {
+    background-position: 0px 0px;
+  }
+  /* line 35, ../scss/pages/_12-great-men.scss */
+  .img-12gm.alan-turing {
+    background-position: -288px 0px;
+  }
+  /* line 36, ../scss/pages/_12-great-men.scss */
+  .img-12gm.don-knuth {
+    background-position: -576px 0px;
+  }
+  /* line 37, ../scss/pages/_12-great-men.scss */
+  .img-12gm.john-mccarthy {
+    background-position: 0px -288px;
+  }
+  /* line 38, ../scss/pages/_12-great-men.scss */
+  .img-12gm.johnan-sebastian-bach {
+    background-position: -288px -288px;
+  }
+  /* line 39, ../scss/pages/_12-great-men.scss */
+  .img-12gm.linus-torvalds {
+    background-position: -576px -288px;
+  }
+  /* line 40, ../scss/pages/_12-great-men.scss */
+  .img-12gm.isaac-newton {
+    background-position: 0px -576px;
+  }
+  /* line 41, ../scss/pages/_12-great-men.scss */
+  .img-12gm.rich-hickey {
+    background-position: -288px -576px;
+  }
+  /* line 42, ../scss/pages/_12-great-men.scss */
+  .img-12gm.richard-stallman {
+    background-position: -576px -576px;
+  }
+  /* line 43, ../scss/pages/_12-great-men.scss */
+  .img-12gm.m-c-escher {
+    background-position: 0px -864px;
+  }
+  /* line 44, ../scss/pages/_12-great-men.scss */
+  .img-12gm.nikola-tesla {
+    background-position: -288px -864px;
+  }
+  /* line 45, ../scss/pages/_12-great-men.scss */
+  .img-12gm.dieter-rams {
+    background-position: -576px -864px;
+  }
+}
+@media screen and (max-width: 432px) {
+  /* line 50, ../scss/pages/_12-great-men.scss */
+  .img-12gm {
+    width: 240px;
+    height: 240px;
+    background-size: 720px 960px;
+  }
+  /* line 54, ../scss/pages/_12-great-men.scss */
+  .img-12gm.steve-jobs {
+    background-position: 0px 0px;
+  }
+  /* line 55, ../scss/pages/_12-great-men.scss */
+  .img-12gm.alan-turing {
+    background-position: -240px 0px;
+  }
+  /* line 56, ../scss/pages/_12-great-men.scss */
+  .img-12gm.don-knuth {
+    background-position: -480px 0px;
+  }
+  /* line 57, ../scss/pages/_12-great-men.scss */
+  .img-12gm.john-mccarthy {
+    background-position: 0px -240px;
+  }
+  /* line 58, ../scss/pages/_12-great-men.scss */
+  .img-12gm.johnan-sebastian-bach {
+    background-position: -240px -240px;
+  }
+  /* line 59, ../scss/pages/_12-great-men.scss */
+  .img-12gm.linus-torvalds {
+    background-position: -480px -240px;
+  }
+  /* line 60, ../scss/pages/_12-great-men.scss */
+  .img-12gm.isaac-newton {
+    background-position: 0px -480px;
+  }
+  /* line 61, ../scss/pages/_12-great-men.scss */
+  .img-12gm.rich-hickey {
+    background-position: -240px -480px;
+  }
+  /* line 62, ../scss/pages/_12-great-men.scss */
+  .img-12gm.richard-stallman {
+    background-position: -480px -480px;
+  }
+  /* line 63, ../scss/pages/_12-great-men.scss */
+  .img-12gm.m-c-escher {
+    background-position: 0px -720px;
+  }
+  /* line 64, ../scss/pages/_12-great-men.scss */
+  .img-12gm.nikola-tesla {
+    background-position: -240px -720px;
+  }
+  /* line 65, ../scss/pages/_12-great-men.scss */
+  .img-12gm.dieter-rams {
+    background-position: -480px -720px;
+  }
+}
+/* line 69, ../scss/pages/_12-great-men.scss */
+.image-label + .img-12gm {
+  margin-top: 120px;
+}
+
+/* line 73, ../scss/pages/_12-great-men.scss */
+.all-12gm-image {
+  margin-bottom: 28px;
+}
