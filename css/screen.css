@@ -27,7 +27,7 @@ html {
 body {
   max-width: 672px;
   padding: 120px 24px;
-  background-image: url("/images/commons/base-line.png");
+  /* background-image: url("/images/commons/base-line.png"); */
   margin: 0 auto;
 }
 
@@ -225,21 +225,22 @@ a:hover, a:focus {
 /* line 53, ../scss/pages/_home.scss */
 .work-card {
   width: 192px;
+  max-width: 100%;
   margin: 0 24px 24px 0;
   float: left;
 }
-/* line 57, ../scss/pages/_home.scss */
+/* line 58, ../scss/pages/_home.scss */
 .work-card:nth-child(3) {
   margin: 0;
 }
-/* line 59, ../scss/pages/_home.scss */
+/* line 60, ../scss/pages/_home.scss */
 .work-card img {
   display: block;
   max-width: 100%;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=88);
   opacity: 0.88;
 }
-/* line 65, ../scss/pages/_home.scss */
+/* line 66, ../scss/pages/_home.scss */
 .work-card a {
   display: block;
   width: 100%;
@@ -263,13 +264,13 @@ a:hover, a:focus {
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-/* line 82, ../scss/pages/_home.scss */
+/* line 83, ../scss/pages/_home.scss */
 .work-card a:focus, .work-card a:hover {
   outline-width: 0;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-/* line 85, ../scss/pages/_home.scss */
+/* line 86, ../scss/pages/_home.scss */
 .work-card a:focus .title, .work-card a:hover .title {
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -277,7 +278,7 @@ a:hover, a:focus {
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-/* line 88, ../scss/pages/_home.scss */
+/* line 89, ../scss/pages/_home.scss */
 .work-card a .title {
   width: 100%;
   position: absolute;
@@ -295,7 +296,7 @@ a:hover, a:focus {
   -o-transition: all 0.2s ease-in 0s;
   transition: all 0.2s ease-in 0s;
 }
-/* line 98, ../scss/pages/_home.scss */
+/* line 99, ../scss/pages/_home.scss */
 .work-card a .desc {
   font-size: 12px;
   font-weight: normal;
@@ -303,4 +304,22 @@ a:hover, a:focus {
   opacity: 0.85;
 }
 
+@media screen and (max-width: 672px) {
+  /* line 108, ../scss/pages/_home.scss */
+  .work-card {
+    width: 288px;
+    float: none;
+    margin: 0 auto 48px;
+  }
+  /* line 112, ../scss/pages/_home.scss */
+  .work-card:nth-child(3) {
+    margin: 0 auto 48px;
+  }
+}
+@media screen and (max-width: 432px) {
+  /* line 119, ../scss/pages/_home.scss */
+  .work-card {
+    width: 240px;
+  }
+}
 /* @import "pages/12-great-men"; */

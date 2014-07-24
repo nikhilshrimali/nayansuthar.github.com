@@ -52,6 +52,7 @@ $social-icon-size : $v-gutter * 2;
 // Work Card
 .work-card {
     width: $h-gutter * 8;
+    max-width: 100%;
     margin: 0 $h-gutter $v-gutter*2 0;
     float: left;
     &:nth-child(3) { margin: 0; }
@@ -100,5 +101,22 @@ $social-icon-size : $v-gutter * 2;
             font-weight: normal;
             @include opacity(0.85);
         }
+    }
+}
+
+@media screen and (max-width:$page-max-width) {
+    .work-card {
+        width: ($h-gutter * 12);
+        float: none;
+        margin: 0 auto $v-gutter*4;
+        &:nth-child(3) {
+            margin: 0 auto $v-gutter*4;
+        }
+    }
+}
+
+@media screen and (max-width: $h-gutter*18) {
+    .work-card {
+        width: ($h-gutter * 10);
     }
 }
