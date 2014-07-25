@@ -250,27 +250,28 @@ a:hover, a:focus {
 /* line 53, ../scss/pages/_home.scss */
 .work-cards-wrapper {
   margin-top: 179px;
+  margin-bottom: 179px;
 }
 
-/* line 56, ../scss/pages/_home.scss */
+/* line 57, ../scss/pages/_home.scss */
 .work-card {
   width: 192px;
   max-width: 100%;
   margin: 0 24px 24px 0;
   float: left;
 }
-/* line 61, ../scss/pages/_home.scss */
+/* line 62, ../scss/pages/_home.scss */
 .work-card:nth-child(3) {
   margin: 0;
 }
-/* line 63, ../scss/pages/_home.scss */
+/* line 64, ../scss/pages/_home.scss */
 .work-card img {
   display: block;
   max-width: 100%;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=88);
   opacity: 0.88;
 }
-/* line 69, ../scss/pages/_home.scss */
+/* line 70, ../scss/pages/_home.scss */
 .work-card a {
   display: block;
   width: 100%;
@@ -294,13 +295,13 @@ a:hover, a:focus {
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-/* line 86, ../scss/pages/_home.scss */
+/* line 87, ../scss/pages/_home.scss */
 .work-card a:focus, .work-card a:hover {
   outline-width: 0;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-/* line 89, ../scss/pages/_home.scss */
+/* line 90, ../scss/pages/_home.scss */
 .work-card a:focus .title, .work-card a:hover .title {
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -308,7 +309,7 @@ a:hover, a:focus {
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-/* line 92, ../scss/pages/_home.scss */
+/* line 93, ../scss/pages/_home.scss */
 .work-card a .title {
   width: 100%;
   position: absolute;
@@ -326,7 +327,7 @@ a:hover, a:focus {
   -o-transition: all 0.2s ease-in 0s;
   transition: all 0.2s ease-in 0s;
 }
-/* line 102, ../scss/pages/_home.scss */
+/* line 103, ../scss/pages/_home.scss */
 .work-card a .desc {
   font-size: 12px;
   font-weight: normal;
@@ -335,19 +336,19 @@ a:hover, a:focus {
 }
 
 @media screen and (max-width: 672px) {
-  /* line 111, ../scss/pages/_home.scss */
+  /* line 112, ../scss/pages/_home.scss */
   .work-card {
     width: 288px;
     float: none;
     margin: 0 auto 48px;
   }
-  /* line 115, ../scss/pages/_home.scss */
+  /* line 116, ../scss/pages/_home.scss */
   .work-card:nth-child(3) {
     margin: 0 auto 48px;
   }
 }
 @media screen and (max-width: 432px) {
-  /* line 122, ../scss/pages/_home.scss */
+  /* line 123, ../scss/pages/_home.scss */
   .work-card {
     width: 240px;
   }
