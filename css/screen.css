@@ -40,11 +40,20 @@ body {
 /*
   Paragraph
   Link
+  Title
+  Sub Title
 */
-/* line 12, ../scss/components/_typography.scss */
+@font-face {
+  font-family: 'Noticia Text';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Noticia Text"), local("NoticiaText-Regular"), url(/fonts/noticia-text.woff2) format("woff2"), url(/fonts/noticia-text.woff) format("woff");
+}
+
+/* line 24, ../scss/components/_typography.scss */
 p {
   width: 100%;
-  padding: 7px 0 5px;
+  padding: 6px 0 6px;
   margin: 0 0 48px;
   cursor: default;
   font-family: "Noticia Text", calibri, arial;
@@ -52,12 +61,12 @@ p {
   line-height: 24px;
   color: #363b47;
 }
-/* line 23, ../scss/components/_typography.scss */
+/* line 35, ../scss/components/_typography.scss */
 p.center {
   text-align: center;
 }
 
-/* line 31, ../scss/components/_typography.scss */
+/* line 43, ../scss/components/_typography.scss */
 a {
   display: inline-block;
   font-family: "Noticia Text", calibri, arial;
@@ -66,64 +75,52 @@ a {
   text-decoration: none;
   color: #575f72;
 }
-/* line 40, ../scss/components/_typography.scss */
+/* line 52, ../scss/components/_typography.scss */
 a:hover, a:focus {
   color: #363b47;
 }
 
-/* line 48, ../scss/components/_typography.scss */
+/* line 60, ../scss/components/_typography.scss */
 .title {
   width: 100%;
-  padding: 2px 0 10px;
+  padding: 11px 0 1px;
   margin: 0 0 60px;
+  font-family: "Noticia Text", calibri, arial;
   font-size: 32px;
   line-height: 48px;
   text-align: center;
   color: #4c5364;
 }
-/* line 58, ../scss/components/_typography.scss */
+/* line 71, ../scss/components/_typography.scss */
 .title.with-subtitle {
   margin: 0;
 }
 
-/* line 64, ../scss/components/_typography.scss */
+/* line 77, ../scss/components/_typography.scss */
 .subtitle {
   width: 100%;
-  padding: 9px 0 3px;
+  padding: 5px 0 7px;
   margin: 0 0 36px;
+  font-family: "Noticia Text", calibri, arial;
   font-size: 15px;
   line-height: 24px;
   font-weight: light;
   text-align: center;
-  color: #cccccc;
+  color: #bbbbbb;
 }
 
-/* /\*-- button --*\/ */
-/* .button { */
-/*     padding: ($base-line * 2)  ($base-line * 2); */
-/*     margin: 0 ($base-line * 4) 0 0; */
-/*     &:last-of-type { */
-/*         margin: 0; */
-/*     } */
-/*     border: 1px solid $color-red; */
-/*     color: $color-red; */
-/*     text-decoration: none; */
-/*     &:hover { */
-/*         border-color: darken($color-red, 5%); */
-/*     } */
-/* } */
-/* /\*-- Footer --*\/ */
-/* .footer { */
-/*     width: 100%; */
-/*     text-align: center; */
-/* } */
-/* /\*-- Layout --*\/ */
-/* .row { */
-/*     width: 100%; */
-/*     overflow: hidden; */
-/*     clear: both; */
-/*     &.margin-bottom { margin-bottom: $grid*2; } */
-/* } */
+/* line 93, ../scss/components/_typography.scss */
+.image-label {
+  display: block;
+  padding: 6px 0 6px;
+  margin: 0 0 24px;
+  font-family: "Noticia Text", calibri, arial;
+  font-size: 13px;
+  line-height: 24px;
+  text-align: center;
+  color: #bbbbbb;
+}
+
 /* line 5, ../scss/components/_separator-line.scss */
 .separator-line {
   width: 240px;
@@ -155,15 +152,41 @@ a:hover, a:focus {
   margin: 0 auto 24px;
 }
 
-/* line 28, ../scss/components/_images.scss */
-.image-label {
-  display: block;
-  padding: 2px 0 10px;
-  margin: 0 0 24px;
-  font-size: 12px;
-  line-height: 12px;
+/*
+  Button
+*/
+/*-- button --*/
+/* line 11, ../scss/components/_buttons.scss */
+.button {
+  padding: 12px 24px;
+  margin: 0 24px 0 0;
+  border: 1px solid #e15842;
+  font-family: "Noticia Text", calibri, arial;
+  font-size: 17px;
+  line-height: 22px;
+  color: #e15842;
   text-align: center;
-  color: #cccccc;
+  text-decoration: none;
+  -webkit-transition: all 0.1s linear;
+  -webkit-transition-delay: 0s;
+  -moz-transition: all 0.1s linear 0s;
+  -o-transition: all 0.1s linear 0s;
+  transition: all 0.1s linear 0s;
+}
+/* line 14, ../scss/components/_buttons.scss */
+.button:last-of-type {
+  margin: 0;
+}
+/* line 27, ../scss/components/_buttons.scss */
+.button:hover {
+  /* padding: $v-gutter ($h-gutter + 2px); */
+  transform: scale(1.03);
+  -webkit-transform: scale(1.03);
+  -moz-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  -o-transform: scale(1.03);
+  color: #de452c;
+  border-color: #de452c;
 }
 
 /*
@@ -506,4 +529,11 @@ a:hover, a:focus {
 /* line 73, ../scss/pages/_12-great-men.scss */
 .all-12gm-image {
   margin-bottom: 28px;
+}
+
+/*-- Footer --*/
+/* line 80, ../scss/pages/_12-great-men.scss */
+.footer {
+  width: 100%;
+  text-align: center;
 }

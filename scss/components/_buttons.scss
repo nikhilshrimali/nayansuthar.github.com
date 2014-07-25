@@ -1,0 +1,33 @@
+//--------------------------------------
+// Buttons
+//--------------------------------------
+/*
+  Button
+*/
+
+
+
+/*-- button --*/
+.button {
+    padding: $v-gutter  $h-gutter;
+    margin: 0 $v-gutter*2 0 0;
+    &:last-of-type {
+        margin: 0;
+    }
+
+    border: 1px solid $color-red;
+    font-family: $link-font-family;
+    font-size: $link-font-size;
+    line-height: 22px;
+    color: $color-red;
+    text-align: center;
+    text-decoration: none;
+    @include transition(all 0.1s linear 0s);
+
+    &:hover {
+        /* padding: $v-gutter ($h-gutter + 2px); */
+        @include transforms(scale(1.03));
+        color: darken($color-red, 5%);
+        border-color: darken($color-red, 5%);
+    }
+}

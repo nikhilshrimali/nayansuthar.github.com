@@ -1,17 +1,29 @@
 //--------------------------------------
-// Base
+// Typography
 //--------------------------------------
 /*
   Paragraph
   Link
+  Title
+  Sub Title
 */
 
+
+@font-face {
+  font-family: 'Noticia Text';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noticia Text'),
+  local('NoticiaText-Regular'),
+  url(/fonts/noticia-text.woff2) format('woff2'),
+  url(/fonts/noticia-text.woff) format('woff');
+}
 
 
 // Paragraph
 p {
     width: 100%;
-    padding: 7px 0 5px;
+    padding: 6px 0 6px;
     margin: 0 0 ($v-gutter * 4);
     cursor: default;
 
@@ -47,9 +59,10 @@ a {
 // Title - <h1>
 .title {
     width: 100%;
-    padding: 2px 0 10px;
+    padding: 11px 0 1px;
     margin: 0 0 $v-gutter*5;
 
+    font-family: $title-font-family;
     font-size: 32px;
     line-height: $v-gutter*4;
     text-align: center;
@@ -63,9 +76,10 @@ a {
 // Subtitle - <h2>
 .subtitle {
     width: 100%;
-    padding: 9px 0 3px;
+    padding: 5px 0 7px;
     margin: 0 0 $v-gutter*3;
 
+    font-family: $subtitle-font-family;
     font-size: 15px;
     line-height: $v-gutter * 2;
     font-weight: light;
@@ -75,40 +89,15 @@ a {
 
 
 
+// Image Label - <h6>
+.image-label {
+    display: block;
+    padding: 6px 0 6px;
+    margin: 0 0 $v-gutter*2;
 
-
-
-/* /\*-- button --*\/ */
-/* .button { */
-/*     padding: ($base-line * 2)  ($base-line * 2); */
-/*     margin: 0 ($base-line * 4) 0 0; */
-/*     &:last-of-type { */
-/*         margin: 0; */
-/*     } */
-
-/*     border: 1px solid $color-red; */
-/*     color: $color-red; */
-/*     text-decoration: none; */
-
-/*     &:hover { */
-/*         border-color: darken($color-red, 5%); */
-/*     } */
-/* } */
-
-
-
-
-/* /\*-- Footer --*\/ */
-/* .footer { */
-/*     width: 100%; */
-/*     text-align: center; */
-/* } */
-
-
-/* /\*-- Layout --*\/ */
-/* .row { */
-/*     width: 100%; */
-/*     overflow: hidden; */
-/*     clear: both; */
-/*     &.margin-bottom { margin-bottom: $grid*2; } */
-/* } */
+    font-family: $label-font-family;
+    font-size: 13px;
+    line-height: 24px;
+    text-align: center;
+    color: $color-gray;
+}
