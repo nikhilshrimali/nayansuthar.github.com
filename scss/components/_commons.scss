@@ -1,0 +1,21 @@
+.home-link {
+    display: block;
+    width: (45px + ($v-gutter*2));
+    height: (20px + ($v-gutter*2));
+    border: $v-gutter solid $color-bg;
+    position: fixed;
+    top: $v-gutter;
+    left: $v-gutter;
+    background: $color-bg url("/images/commons/ns-icon.png");
+    background-size: 100% 100%;
+    z-index: 9999;
+}
+
+@media screen and (max-width:$page-max-width) {
+    .home-link {
+        width: (30px + ($v-gutter*2));
+        height: (14px + ($v-gutter*2));
+        top: 0;
+        left: 0;
+     }
+}
