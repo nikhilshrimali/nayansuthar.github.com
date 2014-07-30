@@ -51,6 +51,10 @@ a {
 
     &:hover, &:focus {
         color: $color-black;
+        outline-width: 0;
+    }
+    &:focus {
+        @include box-shadow(0 1px 0 0 $color-bg, 0 2px 0 0 $color-black);
     }
 }
 

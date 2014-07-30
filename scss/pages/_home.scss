@@ -15,7 +15,10 @@ $social-icon-size : $v-gutter * 2;
 
 // Body element (home page)
 #home-page {
-    padding: $v-gutter*15 $h-gutter $v-gutter*10;
+    padding: $v-gutter*15 $h-gutter $v-gutter*15;
+    @media screen and (max-width:$small-screen) {
+        padding: $v-gutter*10 $h-gutter $v-gutter*10;
+    }
 }
 
 
@@ -23,8 +26,12 @@ $social-icon-size : $v-gutter * 2;
 .social-icons-wrapper {
     width: 100%;
     height: $social-icon-size;
-    margin: 0 0 $v-gutter* 15;
+    margin: 0 0 ($v-gutter*15);
     text-align: center;
+
+    @media screen and (max-width:$small-screen) {
+    margin: 0 0 ($v-gutter*10);
+    }
 }
 .social-icon {
     display: inline-block;
@@ -40,7 +47,7 @@ $social-icon-size : $v-gutter * 2;
     &.github { background-position: -$social-icon-size 0; }
     &.twitter { background-position: -$social-icon-size*2 0; }
 
-    &:hover { @include opacity(1) }
+    &:hover { @include opacity(1); }
     &:focus {
         outline-width: 0;
         @include opacity(1);
@@ -52,7 +59,6 @@ $social-icon-size : $v-gutter * 2;
 // Work Card
 .work-cards-wrapper {
     margin-top: (($v-gutter* 15) - 1px);
-    margin-bottom: (($v-gutter* 15) - 1px);
 }
 .work-card {
     width: $h-gutter * 8;
@@ -89,6 +95,9 @@ $social-icon-size : $v-gutter * 2;
             @include opacity(1);
             .title { @include translateY(-50%); }
         }
+        &:focus {
+            @include box-shadow(none);
+        }
 
         .title {
             width: 100%;
@@ -108,7 +117,20 @@ $social-icon-size : $v-gutter * 2;
     }
 }
 
-@media screen and (max-width:$page-max-width) {
+body.touch {
+    .work-card a {
+        outline-width: 0;
+        @include opacity(1);
+        background: rgba($color-bg, 0.7);
+        .title {
+            @include translateY(-50%);
+            @include text-shadow(0 0 1px $color-bg);
+        }
+    }
+}
+
+
+@media screen and (max-width:$medium-screen) {
     .work-card {
         width: ($h-gutter * 12);
         float: none;
@@ -119,7 +141,7 @@ $social-icon-size : $v-gutter * 2;
     }
 }
 
-@media screen and (max-width: $h-gutter*18) {
+@media screen and (max-width: $small-screen) {
     .work-card {
         width: ($h-gutter * 10);
     }

@@ -7,7 +7,11 @@
     height: 1px;
     background: -webkit-linear-gradient(left,$color-bg,$color-black,$color-bg);
     margin: 0 auto;
-    margin-top: $v-gutter*10;
-    margin-bottom: ($v-gutter*10) - 1px;
+    margin-top: $v-gutter*15;
+    margin-bottom: ($v-gutter*15) - 1px;
     @include opacity(0.2);
+    @media screen and (max-width:$small-screen) {
+        margin-top: $v-gutter*10;
+        margin-bottom: ($v-gutter*10) - 1px;
+    }
 }

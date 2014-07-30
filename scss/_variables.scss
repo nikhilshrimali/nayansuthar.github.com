@@ -22,10 +22,13 @@ $color-red        : #e15842;
 $v-gutter         : 12px; // Base-line
 $h-gutter         : 24px;
 
+// Use 2, 5, 10, 15 as multiple for bigger gutters
 
 
 // Layout
 $page-max-width   : ($h-gutter * 26) + ($h-gutter * 2); // 600px + 24px padding
+$medium-screen    : $page-max-width;
+$small-screen     : $h-gutter*18;
 
 
 
